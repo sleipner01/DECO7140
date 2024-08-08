@@ -1,0 +1,71 @@
+/*
+  Components
+  */
+
+/* 
+  Button Component
+  ================
+*/
+
+.btn {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 50px;
+	color: var(--color-white);
+	font-size: 1.1rem;
+	cursor: pointer;
+}
+
+.btn-primary {
+	background-color: var(--color-blue);
+}
+
+.btn-primary:hover {
+	background-color: var(--color-cyan);
+}
+
+.btn-action {
+	background-color: var(--color-teal);
+}
+.btn-action:hover {
+	background-color: var(--color-cyan);
+}
+
+/*
+  Card Component
+  ==============
+  This component can be used to display content in a card layout.
+*/
+
+.card {
+	background-color: var(--color-white);
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	transition: transform 0.2s ease-in-out;
+}
+
+.card-header {
+	background-color: var(--color-blue);
+	color: var(--color-white);
+	padding: 16px;
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+
+.card-content {
+	padding: 16px;
+}
+
+.card-text {
+	font-size: 1.1rem;
+	color: var(--color-black);
+}
+
+.card-footer {
+	background-color: var(--color-lily);
+	color: var(--color-white);
+	padding: 4px 16px;
+	text-align: right;
+	font-size: 0.875rem;
+}
