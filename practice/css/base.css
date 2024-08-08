@@ -1,0 +1,59 @@
+/*
+  * Base styles
+  * ===========
+  * This file contains the basic styles for the website.
+  * It sets the default font family, font size, and colors.
+  */
+
+/* TODO: Pick color scheme */
+:root {
+	--color-primary: #f9f9f9;
+	--color-secondary: #333;
+	--color-tertiary: #f4f4f4;
+	--color-accent: #f00;
+	--color-accent-dark: #c00;
+	--color-accent-light: #f99;
+	--color-accent-lighter: #fcc;
+}
+
+body {
+	font-family: "Poppins", system-ui, sans-serif;
+	font-size: 100%;
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-weight: 400;
+	margin: 30px 0 30px 0;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+h4 {
+	font-size: 1.25rem;
+	font-weight: 400;
+}
+
+h5 {
+	font-size: 1.1rem;
+	font-weight: 400;
+}
+
+h6 {
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+p {
+	font-size: 1.1rem;
+	font-weight: 300;
+	line-height: 1.2;
+}
