@@ -1,0 +1,51 @@
+/*
+  * Layout
+  */
+
+body {
+	max-width: 1920px;
+	min-height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+footer {
+	margin: auto 0 0;
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+}
+
+.page-container {
+	width: 80%;
+	margin: 20px auto;
+}
+
+.back-to-root-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+.back-to-root-nav a:hover {
+	width: 120px;
+}
+
+.back-to-root-nav a {
+	text-decoration: none;
+	color: var(--color-secondary);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	overflow: hidden;
+	width: 14px;
+	padding: 10px 5px;
+	transition: width 0.06s ease-in-out;
+}
+
+.back-to-root-nav a p {
+	white-space: nowrap;
+	font-size: 14px;
+}
