@@ -1,0 +1,5 @@
+practice/**/*
+package-lock.json
+package.json
+eslint.config.mjs
+node_modules
