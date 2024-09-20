@@ -1,2 +1,2 @@
-import { PageLoadMessage } from './page_load_message.js';
-PageLoadMessage();
+import { initilizeMobileNavbar } from './components/navbar.js';
+initilizeMobileNavbar();

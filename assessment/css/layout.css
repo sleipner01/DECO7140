@@ -43,6 +43,7 @@ footer {
 /* 
   Navbar
   ================
+  NOTE: Designed desktop first to simplify css logic
 */
 
 .container-navbar {
@@ -60,6 +61,27 @@ footer {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+@media only screen and (width < 768px) {
+  .menu-mobile {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 4rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+  }
+
+  .menu-open {
+    display: flex;
+  }
+
+  .menu-closed {
+    display: none;
+  }
 }
 
 /* 

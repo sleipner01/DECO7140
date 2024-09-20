@@ -3,6 +3,29 @@
 */
 
 /* 
+  Navbar Toggle
+  ================
+*/
+
+#nav-menu-toggle {
+  display: none;
+}
+
+@media only screen and (width < 768px) {
+  #nav-menu-toggle {
+    display: initial;
+  }
+
+  .toggle-open-state {
+    /* TODO */
+  }
+
+  .toggle-closed-state {
+    /* TODO */
+  }
+}
+
+/* 
   Link Logo
   ================
 */
@@ -21,7 +44,7 @@
   font-weight: 400;
 }
 
-@media only screen and (width > var(--md)) {
+@media only screen and (width > 768px) {
   .link-logo span {
     display: block;
   }

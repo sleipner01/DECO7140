@@ -19,11 +19,15 @@
       sizes="192x192"
       href="./public/logo_icons/icon-192x192.png"
     />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/css_reset.css" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/utilities.css" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,24 +35,10 @@
       rel="stylesheet"
     />
 
-    <!-- service worker registration -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker
-            .register('./js/serviceWorker.js')
-            .then((registration) => {
-              console.log(
-                'Service Worker registered with scope: ',
-                registration.scope
-              );
-            })
-            .catch((error) => {
-              console.log('Service Worker registration failed: ', error);
-            });
-        });
-      }
-    </script>
+    <!-- Service worker registration -->
+    <script src="./js/pwa.js"></script>
+
+    <!-- Scripts -->
     <script type="module" src="./js/index.js" defer></script>
     <script type="module" src="./js/home.js" defer></script>
   </head>
@@ -67,7 +57,7 @@
           />
           <span aria-hidden="true">Hidden Gems</span>
         </a>
-        <ul class="navbar-nav-list">
+        <ul class="navbar-nav-list menu-mobile" id="navbar-menu">
           <li>
             <a href="#" class="link-nav active">
               <span class="wrapper-svg svg-home"></span>
@@ -93,6 +83,7 @@
             </a>
           </li>
         </ul>
+        <button id="nav-menu-toggle" aria-label="Open Menu">Open</button>
       </nav>
       <div aria-label="hero" class="wrapper-hero">
         <h1>Hidden Gems</h1>

@@ -1,2 +1,3 @@
-import { PageLoadMessage } from './page_load_message';
-PageLoadMessage();
+import { initilizeMobileNavbar } from './components/navbar';
+
+initilizeMobileNavbar();

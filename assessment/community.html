@@ -11,17 +11,29 @@
     <meta name="theme-color" content="#49D49D" />
 
     <link rel="manifest" href="./manifest.json" />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="./public/logo_icons/icon-192x192.png"
+    />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/css_reset.css" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/utilities.css" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400;&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Scripts -->
+    <script type="module" src="./js/index.js" defer></script>
   </head>
 
   <body>
@@ -38,7 +50,7 @@
           />
           <span aria-hidden="true">Hidden Gems</span>
         </a>
-        <ul class="navbar-nav-list">
+        <ul class="navbar-nav-list menu-mobile" id="navbar-menu">
           <li>
             <a href="./index.html" class="link-nav">
               <span class="wrapper-svg svg-home"></span>
@@ -64,6 +76,7 @@
             </a>
           </li>
         </ul>
+        <button id="nav-menu-toggle" aria-label="Open Menu">Open</button>
       </nav>
       <h1 class="heading-page">Community</h1>
     </header>
