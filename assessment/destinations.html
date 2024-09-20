@@ -4,21 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./public/favicon.png" type="image/png" />
-    <title>Hidden Gems</title>
-    <meta
-      name="description"
-      content="DECO7140 - Assessment | Magnus Byrkjeland"
-    />
+    <title>Destinations · Hidden Gems</title>
+    <meta name="description" content="Destinations · Hidden Gems" />
     <meta name="author" content="Magnus Byrkjeland" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#49D49D" />
 
     <link rel="manifest" href="./manifest.json" />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="./public/logo_icons/icon-192x192.png"
-    />
     <link rel="stylesheet" href="./css/css_reset.css" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/utilities.css" />
@@ -30,42 +22,21 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400;&display=swap"
       rel="stylesheet"
     />
-
-    <!-- service worker registration -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker
-            .register('./js/serviceWorker.js')
-            .then((registration) => {
-              console.log(
-                'Service Worker registered with scope: ',
-                registration.scope
-              );
-            })
-            .catch((error) => {
-              console.log('Service Worker registration failed: ', error);
-            });
-        });
-      }
-    </script>
   </head>
 
   <body>
     <header>
-      <h1>Hidden Gems</h1>
+      <h1>Destinations</h1>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="./destinations.html">Destinations</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">Destinations</a></li>
           <li><a href="./community.html">Community</a></li>
           <li><a href="./itineraries.html">Saved Itineraries</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <p id="1">This site is under development...</p>
-      <p>Check back soon for updates!</p>
       <img src="./media/logo/svg/logo.svg" width="200" alt="Hidden Gems Logo" />
     </main>
     <footer>

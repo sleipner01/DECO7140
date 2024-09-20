@@ -1,9 +1,13 @@
 /*
-  Helper classes for applying a specific style to an element.
-  */
+Utility/Helper classes for applying a specific style to an element.
+*/
 
-/* Margin helpers */
+/* Margin */
 
-.m-0 {
-  margin: 0;
+.m-4 {
+  margin: 4rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
 }
