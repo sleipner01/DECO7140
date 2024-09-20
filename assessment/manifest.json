@@ -1,0 +1,26 @@
+{
+  "name": "Hidden Gems",
+  "short_name": "Hidden Gems",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#49D49D",
+  "description": "A progressive web app version of the Hidden Gems website.",
+  "icons": [
+    {
+      "src": "./public/logo_icons/icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "./public/logo_icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./public/logo_icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
