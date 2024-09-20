@@ -1,2 +1,2 @@
-import { PageLoadMessage } from './page_load_message';
+import { PageLoadMessage } from './page_load_message.js';
 PageLoadMessage();

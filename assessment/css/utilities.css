@@ -1,8 +1,28 @@
 /*
-Utility/Helper classes for applying a specific style to an element.
+  Utility/Helper classes for applying a specific style to an element.
 */
 
-/* Margin */
+/* 
+  Screen Reader 
+  =============== 
+*/
+/* This class was created by Github Copilot  */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*
+  Margin
+  ===============
+*/
 
 .m-4 {
   margin: 4rem;
