@@ -21,6 +21,7 @@
 	"homepage": "https://github.com/sleipner01/DECO7140#readme",
 	"devDependencies": {
 		"@eslint/js": "^9.10.0",
+		"@types/eslint__js": "^8.42.3",
 		"eslint": "^9.10.0",
 		"prettier": "^3.3.3",
 		"stylelint": "^16.9.0",
