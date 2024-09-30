@@ -16,6 +16,12 @@ body {
   padding: var(--top-offset) 0 0;
 }
 
+@media only screen and (width > 768px) {
+  body {
+    padding-top: 0;
+  }
+}
+
 /* 
   Footer
   ================
