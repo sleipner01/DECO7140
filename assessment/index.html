@@ -54,6 +54,7 @@
             src="./media/logo/svg/logo.svg"
             width="50"
             alt="Hiddem Gems Logo"
+            loading="eager"
           />
           <span aria-hidden="true">Hidden Gems</span>
         </a>
@@ -83,7 +84,15 @@
             </a>
           </li>
         </ul>
-        <button id="nav-menu-toggle" aria-label="Open Menu">Open</button>
+        <button
+          id="nav-menu-toggle"
+          aria-expanded="false"
+          aria-label="Open menu"
+        >
+          <span class="menu-toggle__burger"></span>
+          <span class="menu-toggle__burger"></span>
+          <span class="menu-toggle__burger"></span>
+        </button>
       </nav>
       <div aria-label="hero" class="wrapper-hero">
         <h1>Hidden Gems</h1>

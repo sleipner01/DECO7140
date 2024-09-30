@@ -5,32 +5,28 @@ export function initilizeMobileNavbar() {
   }
 
   function handleMenuToggle(toggle, menu) {
-    if (menu.getAttribute('data-menu-state') === 'open') {
-      menu.setAttribute('data-menu-state', 'closed');
-      toggle.setAttribute('aria-label', 'Close menu');
-      toggle.classList.remove('toggle-open-state');
-      toggle.innerText = 'Open';
-    } else {
-      menu.setAttribute('data-menu-state', 'open');
-      toggle.setAttribute('aria-label', 'Open menu');
-      toggle.classList.add('toggle-open-state');
-      toggle.innerText = 'Close';
-    }
-    handleMenuStateChange(menu);
+    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', !isExpanded);
+    toggle.setAttribute('aria-label', !isExpanded ? 'Close menu' : 'Open menu');
+
+    handleMenuStateChange(toggle, menu);
   }
-  function handleMenuStateChange(menu) {
-    const state = menu.getAttribute('data-menu-state');
-    if (state === 'open') {
-      menu.classList.add('menu-open');
-      menu.classList.remove('menu-closed');
+
+  function handleMenuStateChange(toggle, menu) {
+    menu.classList.toggle('menu-open');
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    menu.setAttribute('aria-hidden', !isOpen);
+
+    // Add or remove no-scroll class to prevent or allow scrolling
+    const body = document.body;
+    if (isOpen) {
+      body.classList.add('no-scroll');
     } else {
-      menu.classList.add('menu-closed');
-      menu.classList.remove('menu-open');
+      body.classList.remove('no-scroll');
     }
   }
+
   const menu = document.getElementById('navbar-menu');
   const toggle = document.getElementById('nav-menu-toggle');
-  toggle === null || toggle === void 0
-    ? void 0
-    : toggle.addEventListener('click', () => handleMenuToggle(toggle, menu));
+  toggle.addEventListener('click', () => handleMenuToggle(toggle, menu));
 }

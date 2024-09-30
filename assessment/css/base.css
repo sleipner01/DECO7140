@@ -21,6 +21,7 @@
   --xl: 1280px;
   --xxl: 1536px;
   --max-width: 1920px;
+  --top-offset: 4rem; /* Offset page for navbar height */
 }
 
 /* Adjusting for borders, padding etc. */

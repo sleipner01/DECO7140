@@ -13,6 +13,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  padding: var(--top-offset) 0 0;
 }
 
 /* 
@@ -48,6 +49,7 @@ footer {
 
 .container-navbar {
   display: flex;
+  background-color: var(--color-white);
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem var(--page-edge-padding);
@@ -64,23 +66,32 @@ footer {
 }
 
 @media only screen and (width < 768px) {
+  .container-navbar {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+  }
+
   .menu-mobile {
-    display: none;
-    position: absolute;
+    display: flex;
     flex-direction: column;
-    top: 4rem;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: var(--top-offset);
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: white;
+    background-color: var(--color-white);
+    transition: height 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .menu-open {
-    display: flex;
-  }
-
-  .menu-closed {
-    display: none;
+    height: calc(
+      100vh - 4rem
+    ); /* Backup for browsers where dvh does not work */
+    height: calc(100dvh - 4rem);
   }
 }
 
