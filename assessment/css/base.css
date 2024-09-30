@@ -5,10 +5,10 @@
   * It sets the default font family, font size, and colors.
   */
 
-/* TODO: Pick color scheme */
 :root {
   --color-white: #fff;
   --color-black: #000;
+  --color-light-gray: #cad1d0;
   --color-aquamarine: #95f9e3;
   --color-turquoise: #69ebd0;
   --color-emerald: #49d49d;

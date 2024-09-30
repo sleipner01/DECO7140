@@ -172,3 +172,91 @@
   mask: url('../media/icons/book-marked.svg') no-repeat center;
   -webkit-mask: url('../media/icons/book-marked.svg') no-repeat center;
 }
+
+.svg-chevron-right {
+  mask: url('../media/icons/chevron.svg') no-repeat center;
+  -webkit-mask: url('../media/icons/chevron.svg') no-repeat center;
+}
+
+/* 
+  CTA Card
+  ================
+*/
+
+.cta-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-light-gray);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.cta-card .card-content {
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.cta-card .card-content h2 {
+  font-size: 1.5rem;
+}
+
+.cta-card .card-content a {
+  display: flex;
+  text-wrap: nowrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cta-card .card-content a > .wrapper-svg {
+  background-color: white;
+  width: 1rem;
+}
+
+.cta-card > img {
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+}
+
+@media only screen and (width > 768px) {
+}
+
+/* 
+  Button
+  ================
+*/
+
+.button {
+  padding: 0.5rem 1rem;
+  color: var(--color-white);
+  background-color: var(--color-viridian);
+  border: 2px solid var(--color-viridian);
+  border-radius: 24px;
+  outline-offset: 2px;
+  transition: all 0.12s;
+}
+.button:hover,
+.button:focus-visible {
+  color: var(--color-white);
+  border-color: var(--color-aquamarine);
+}
+
+.button .wrapper-svg {
+  transition: all 0.12s;
+}
+.button:hover .wrapper-svg,
+.button:focus-visible .wrapper-svg {
+  translate: 0.25rem;
+}
+
+.button-ghost {
+  background-color: var(--color-white);
+  border-color: var(--color-viridian);
+  color: var(--color-viridian);
+}
+.button-ghost:hover {
+  color: var(--color-white);
+  background-color: var(--color-viridian);
+}
