@@ -6,7 +6,9 @@
   Screen Reader 
   =============== 
 */
+
 /* This class was created by Github Copilot  */
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -18,6 +20,11 @@
   white-space: nowrap;
   border-width: 0;
 }
+
+/*
+  Mobile
+  ===============
+*/
 
 .no-scroll {
   overflow: hidden;

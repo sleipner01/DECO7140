@@ -3,6 +3,42 @@
 */
 
 /* 
+  SVGs
+  ================
+  To use SVGs, add the class 'wrapper-svg' to a div element and add the class of the SVG you want to use.
+  For example, to use the home SVG, add the class 'svg-home' to the div element.
+  This is to be able to use the same SVG multiple times with different colors,
+  without having embed the svg in the HTML.
+*/
+
+.wrapper-svg {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+}
+
+.svg-home {
+  mask: url('../media/icons/home.svg') no-repeat center;
+}
+
+.svg-map-pin {
+  mask: url('../media/icons/map-pin.svg') no-repeat center;
+}
+
+.svg-message-circle-heart {
+  mask: url('../media/icons/message-circle-heart.svg') no-repeat center;
+}
+
+.svg-book-marked {
+  mask: url('../media/icons/book-marked.svg') no-repeat center;
+}
+
+.svg-chevron-right {
+  mask: url('../media/icons/chevron.svg') no-repeat center;
+}
+
+/* 
   Navbar Toggle
   ================
 */
@@ -16,12 +52,11 @@
     --toggle-width: 22px;
     --toggle-height: 18px;
 
-    display: initial;
+    display: flex;
+    flex-direction: column;
     background: none;
     border: none;
     padding: 0;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     width: var(--toggle-width);
     height: var(--toggle-height);
@@ -31,7 +66,7 @@
   }
 
   /* Each line of the burger menu */
-  .menu-toggle__burger {
+  .menu-toggle-burger {
     --bar-height: 2px;
 
     width: 100%;
@@ -43,19 +78,19 @@
   }
 
   /* Active state animations */
-  #nav-menu-toggle[aria-expanded='true'] .menu-toggle__burger:nth-child(1) {
+  #nav-menu-toggle[aria-expanded='true'] .menu-toggle-burger:nth-child(1) {
     rotate: 45deg;
-    width: calc(var(--toggle-height) * 1.4142135624);
+    width: calc(var(--toggle-height) * 1.4142);
     translate: 0 calc(var(--bar-height) / -2);
   }
 
-  #nav-menu-toggle[aria-expanded='true'] .menu-toggle__burger:nth-child(2) {
+  #nav-menu-toggle[aria-expanded='true'] .menu-toggle-burger:nth-child(2) {
     opacity: 0;
   }
 
-  #nav-menu-toggle[aria-expanded='true'] .menu-toggle__burger:nth-child(3) {
+  #nav-menu-toggle[aria-expanded='true'] .menu-toggle-burger:nth-child(3) {
     rotate: -45deg;
-    width: calc(var(--toggle-height) * 1.4142135624);
+    width: calc(var(--toggle-height) * 1.4142);
     translate: 0 calc(var(--bar-height) / 2);
   }
 }
@@ -86,6 +121,47 @@
 }
 
 /* 
+  Button
+  ================
+*/
+
+.button {
+  padding: 0.5rem 1rem;
+  color: var(--color-white);
+  background-color: var(--color-viridian);
+  border: 2px solid var(--color-viridian);
+  border-radius: 24px;
+  outline-offset: 2px;
+  transition: all 0.12s;
+}
+
+.button .wrapper-svg {
+  transition: all 0.12s;
+}
+
+.button-ghost {
+  background-color: var(--color-white);
+  border-color: var(--color-viridian);
+  color: var(--color-viridian);
+}
+
+.button-ghost:hover {
+  color: var(--color-white);
+  background-color: var(--color-viridian);
+}
+
+.button:hover,
+.button:focus-visible {
+  color: var(--color-white);
+  border-color: var(--color-aquamarine);
+}
+
+.button:hover .wrapper-svg,
+.button:focus-visible .wrapper-svg {
+  translate: 0.25rem;
+}
+
+/* 
   Link Nav
   ================
 */
@@ -109,73 +185,38 @@
 .link-nav.active {
   color: var(--color-viridian);
 }
-.link-nav.active .wrapper-svg {
-  background-color: var(--color-viridian);
-}
 
+/* stylelint-disable-next-line no-descending-specificity */
 .link-nav .wrapper-svg {
   width: 1.4rem;
   height: 1.4rem;
+}
+
+.link-nav.active .wrapper-svg {
+  background-color: var(--color-viridian);
 }
 
 .link-nav:hover {
   color: var(--color-viridian);
   border-color: var(--color-viridian);
 }
+
 .link-nav:hover .wrapper-svg {
   background-color: var(--color-viridian);
 }
+
 .link-nav:focus-visible {
   border-color: var(--color-viridian);
   color: var(--color-viridian);
   outline: none;
 }
+
 .link-nav:focus-visible .wrapper-svg {
   background-color: var(--color-viridian);
 }
+
 .link-nav:focus {
   outline: none;
-}
-
-/* 
-  SVGs
-  ================
-  To use SVGs, add the class 'wrapper-svg' to a div element and add the class of the SVG you want to use.
-  For example, to use the home SVG, add the class 'svg-home' to the div element.
-  This is to be able to use the same SVG multiple times with different colors,
-  without having embed the svg in the HTML.
-*/
-
-.wrapper-svg {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-black);
-}
-
-.svg-home {
-  mask: url('../media/icons/home.svg') no-repeat center;
-  -webkit-mask: url('../media/icons/home.svg') no-repeat center;
-}
-
-.svg-map-pin {
-  mask: url('../media/icons/map-pin.svg') no-repeat center;
-  -webkit-mask: url('../media/icons/map-pin.svg') no-repeat center;
-}
-
-.svg-message-circle-heart {
-  mask: url('../media/icons/message-circle-heart.svg') no-repeat center;
-  -webkit-mask: url('../media/icons/message-circle-heart.svg') no-repeat center;
-}
-
-.svg-book-marked {
-  mask: url('../media/icons/book-marked.svg') no-repeat center;
-  -webkit-mask: url('../media/icons/book-marked.svg') no-repeat center;
-}
-
-.svg-chevron-right {
-  mask: url('../media/icons/chevron.svg') no-repeat center;
-  -webkit-mask: url('../media/icons/chevron.svg') no-repeat center;
 }
 
 /* 
@@ -192,7 +233,7 @@
 }
 
 .cta-card .card-content {
-  padding: 1rem 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -218,45 +259,4 @@
 .cta-card > img {
   aspect-ratio: 5 / 3;
   object-fit: cover;
-}
-
-@media only screen and (width > 768px) {
-}
-
-/* 
-  Button
-  ================
-*/
-
-.button {
-  padding: 0.5rem 1rem;
-  color: var(--color-white);
-  background-color: var(--color-viridian);
-  border: 2px solid var(--color-viridian);
-  border-radius: 24px;
-  outline-offset: 2px;
-  transition: all 0.12s;
-}
-.button:hover,
-.button:focus-visible {
-  color: var(--color-white);
-  border-color: var(--color-aquamarine);
-}
-
-.button .wrapper-svg {
-  transition: all 0.12s;
-}
-.button:hover .wrapper-svg,
-.button:focus-visible .wrapper-svg {
-  translate: 0.25rem;
-}
-
-.button-ghost {
-  background-color: var(--color-white);
-  border-color: var(--color-viridian);
-  color: var(--color-viridian);
-}
-.button-ghost:hover {
-  color: var(--color-white);
-  background-color: var(--color-viridian);
 }

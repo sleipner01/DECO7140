@@ -78,6 +78,7 @@ footer a:hover {
   .wrapper-image-footer {
     display: initial;
   }
+
   .wrapper-links-footer {
     justify-content: center;
     align-items: end;
@@ -144,9 +145,8 @@ footer a:hover {
   }
 
   .menu-open {
-    height: calc(
-      100vh - 4rem
-    ); /* Backup for browsers where dvh does not work */
+    /* Backup for browsers where dvh does not work */
+    height: calc(100vh - 4rem);
     height: calc(100dvh - 4rem);
   }
 }
