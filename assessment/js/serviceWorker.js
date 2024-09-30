@@ -5,8 +5,6 @@
  * This is a better approach so that only the pages that the user is interested in will be pre-loaded.
  */
 
-/* eslint-disable */
-
 // Name of the cache
 const CACHE_NAME = 'my-hidden-gems-cache-v1';
 
