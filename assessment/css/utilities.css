@@ -42,3 +42,10 @@
 .mb-4 {
   margin-bottom: 4rem;
 }
+
+@media only screen and (width >= 768px) {
+  /* stylelint-disable-next-line selector-class-pattern */
+  .md_mb-8 {
+    margin-bottom: 8rem;
+  }
+}

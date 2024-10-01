@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/utilities.css" />
-    <link rel="stylesheet" href="./css/homepage.css" />
+    <link rel="stylesheet" href="./css/pages/homepage.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,10 +45,11 @@
   </head>
 
   <body>
-    <header class="mb-4">
+    <header class="mb-4 md_mb-8">
       <nav
         aria-label="Main navigation"
         class="container-navbar page-edge-padding"
+        id="navbar"
       >
         <a href="./index.html" class="link-logo" aria-label="Home">
           <img
@@ -96,7 +97,25 @@
         </button>
       </nav>
       <div aria-label="hero" class="wrapper-hero">
-        <h1>Hidden Gems</h1>
+        <img
+          src="./media/images/hero.jpg"
+          alt="Woman with a backpack standing on a terrace looking out over a bay"
+          class="hero-image"
+        />
+
+        <div class="hero-main-content">
+          <h1>Hidden Gems</h1>
+          <img
+            src="./media/misc/svg/backpacker.svg"
+            alt="Vector image of backpacker strolling along a blank canvas."
+            class="hero-vector-image backpacker"
+          />
+          <img
+            src="./media/misc/svg/compass.svg"
+            alt="Vector image of a compass."
+            class="hero-vector-image compass"
+          />
+        </div>
       </div>
     </header>
     <main>

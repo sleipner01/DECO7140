@@ -114,7 +114,7 @@
   font-weight: 400;
 }
 
-@media only screen and (width > 768px) {
+@media only screen and (width >= 1024px) {
   .link-logo span {
     display: block;
   }

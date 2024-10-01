@@ -14,3 +14,8 @@ or
 
 1. Clone the repository
 2. Install the dependencies with `npm install`
+
+## Assets and Resources
+
+- [Compass asset used in hero](https://www.shutterstock.com/nb/image-vector/compass-icons-set-vector-vectors-2468768179)
+- [Single Backpacker asset used in hero](https://www.shutterstock.com/nb/image-vector/single-backpacker-traveler-hiker-bring-bag-2503906333)

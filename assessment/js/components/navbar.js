@@ -26,7 +26,17 @@ export function initilizeMobileNavbar() {
     }
   }
 
+  function addShadowOnScroll(navbar) {
+    if (window.scrollY > 0) {
+      navbar.classList.add('navbar-shadow');
+    } else {
+      navbar.classList.remove('navbar-shadow');
+    }
+  }
+
   const menu = document.getElementById('navbar-menu');
   const toggle = document.getElementById('nav-menu-toggle');
+  const navbar = document.getElementById('navbar');
   toggle.addEventListener('click', () => handleMenuToggle(toggle, menu));
+  window.addEventListener('scroll', () => addShadowOnScroll(navbar));
 }

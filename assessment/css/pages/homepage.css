@@ -1,0 +1,122 @@
+/*
+  Hero
+  ================
+*/
+
+.wrapper-hero {
+  display: flex;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.wrapper-hero .hero-main-content h1 {
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+
+.wrapper-hero .hero-image {
+  display: none;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+  border-bottom-right-radius: 40%;
+}
+
+.wrapper-hero .hero-main-content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding-top: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-hero .hero-main-content .hero-vector-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.wrapper-hero .hero-main-content .hero-vector-image.backpacker {
+  height: 90%;
+  width: auto;
+  right: -6rem;
+  left: auto;
+  bottom: 0;
+  filter: opacity(0.6);
+  z-index: -2;
+}
+
+.wrapper-hero .hero-main-content .hero-vector-image.compass {
+  height: 8rem;
+  width: auto;
+  rotate: 26deg;
+  top: 6rem;
+  left: 1rem;
+  filter: opacity(0.6);
+}
+
+@media only screen and (width >= 480px) {
+  .wrapper-hero .hero-main-content {
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .wrapper-hero .hero-main-content h1 {
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+  }
+
+  .wrapper-hero .hero-main-content .hero-vector-image.compass {
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
+@media only screen and (width >= 1024px) {
+  .wrapper-hero .hero-image {
+    display: block;
+  }
+}
+
+/* 
+  CTA Grid
+  ================
+*/
+
+.homepage-cta-grid {
+  margin: 0 var(--page-edge-padding);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media only screen and (width >= 600px) {
+  .homepage-cta-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  .homepage-cta-grid {
+    padding: 0 4rem;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (width >= 1024px) {
+  .homepage-cta-grid {
+    padding: 0 8rem;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
