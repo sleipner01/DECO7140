@@ -1,0 +1,35 @@
+/*
+  Destinations
+  ================
+*/
+
+.section-destinations {
+  margin: 0 var(--page-edge-padding);
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media only screen and (width >= 600px) {
+  .section-destinations {
+    padding: 0 4rem;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  .section-destinations {
+    padding: 0 4rem;
+  }
+
+  .destinations-grid {
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
