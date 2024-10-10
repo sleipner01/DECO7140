@@ -153,7 +153,8 @@
 .button:hover,
 .button:focus-visible {
   color: var(--color-white);
-  border-color: var(--color-aquamarine);
+  background-color: var(--color-emerald);
+  outline-color: var(--color-wenge);
 }
 
 .button:hover .wrapper-svg,
