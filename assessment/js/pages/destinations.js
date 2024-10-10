@@ -11,15 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // TODO: Render proper destination cards
   data.getPlaces.forEach((place) => {
-    const card = document.createElement('div');
+    const card = document.createElement('article');
     card.classList.add('cta-card');
-    // TODO: Add Tags
+    card.setAttribute('aria-labelledby', `destination-${place.id}-heading`);
     card.innerHTML = `
-      <img src="./media/placeholder.svg" alt="${place.name}" />
+      <img src="./media/placeholder.svg" alt="Image of ${place.name}" loading="lazy" />
       <div class="card-content">
-      <h3>${place.name}</h3>
-      <p><strong>Country:</strong> ${place.country}</p>
-      <a href="./destination.html?id=${place.id}" class="button mt-auto">Explore destination</a>
+        <h3 id="destination-${place.id}-heading">${place.name}</h3>
+        <p><strong>Country:</strong> ${place.country}</p>
+        <a href="./destination.html?id=${place.id}" class="button mt-auto" aria-label="Explore ${place.name} destination">Explore destination</a>
       </div>
     `;
     destinationsGrid.appendChild(card);
