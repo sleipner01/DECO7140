@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   data.getPlaces.forEach((place) => {
     const card = document.createElement('div');
     card.classList.add('cta-card');
+    // TODO: Add Tags
     card.innerHTML = `
       <img src="./media/placeholder.svg" alt="${place.name}" />
       <div class="card-content">
