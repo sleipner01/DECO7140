@@ -17,5 +17,12 @@ or
 
 ## Assets and Resources
 
+#### Homepage
+
 - [Compass asset used in hero](https://www.shutterstock.com/nb/image-vector/compass-icons-set-vector-vectors-2468768179)
 - [Single Backpacker asset used in hero](https://www.shutterstock.com/nb/image-vector/single-backpacker-traveler-hiker-bring-bag-2503906333)
+- [Hero Image](https://www.shutterstock.com/nb/image-photo/travel-travelwoman-solo-traveling-alonedigital-nomadbleisurework-2508261587)
+- [Destinations CTA](https://www.shutterstock.com/nb/image-photo/person-walking-grassy-hill-mountains-under-2474842457)
+- [Community CTA](https://www.shutterstock.com/nb/image-photo/man-waiting-his-son-rappels-down-1023960841)
+- [Recommedation CTA](https://www.shutterstock.com/nb/image-photo/traveler-woman-relaxing-on-swing-above-2130878285)
+- [Create Itineray CTA](https://www.shutterstock.com/nb/image-photo/saving-money-investment-future-senior-adult-2495629229)

@@ -92,8 +92,16 @@
   ================
 */
 
-.homepage-cta-grid {
+.section-cta-homepage {
   margin: 0 var(--page-edge-padding);
+}
+
+.section-cta-homepage h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.homepage-cta-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -106,17 +114,70 @@
 }
 
 @media only screen and (width >= 768px) {
-  .homepage-cta-grid {
+  .section-cta-homepage {
     padding: 0 4rem;
+  }
+
+  .homepage-cta-grid {
     gap: 4rem;
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media only screen and (width >= 1024px) {
-  .homepage-cta-grid {
+  .section-cta-homepage {
     padding: 0 8rem;
+  }
+
+  .homepage-cta-grid {
     gap: 4rem;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 
+  Alternating Name
+  ================
+  Animation to slide in and out different names. See alternating_name.js.
+*/
+
+#name-container {
+  overflow: hidden;
+  height: 100%;
+}
+
+#alternating-name {
+  display: inline-block;
+}
+
+.slide-out-up {
+  animation: slide-out-up 0.5s forwards;
+}
+
+.slide-in-up {
+  animation: slide-in-up 0.5s forwards;
+}
+
+@keyframes slide-out-up {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
