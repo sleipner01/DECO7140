@@ -1,5 +1,7 @@
 import { getDestinations } from '../fetch/destinations.js';
 
+// Query build with graphql
+// TODO: Update the query to fetch the required data
 const query =
   '{\n  getPlaces(categories: ["NATURE"], limit: 10) {\n    id\n    abstract\n    name\n    country\n    }\n}';
 const { data } = await getDestinations(query);

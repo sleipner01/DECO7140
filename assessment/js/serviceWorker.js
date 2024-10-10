@@ -11,10 +11,7 @@ const CACHE_NAME = 'my-hidden-gems-cache-v1';
 // List of files to pre-cache (optional, only the essential ones)
 const urlsToPreCache = [
   '../', // Cache the home page
-  '../index.html', // Main page
-  '../destinations.html', // Destinations
-  '../itineraries.html', // Itineraries
-  '../community.html', // Community
+  '../index.html',
 ];
 
 // Install event - pre-cache only essential files
