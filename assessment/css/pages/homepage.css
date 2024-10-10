@@ -22,6 +22,7 @@
   object-fit: cover;
   object-position: center;
   z-index: -1;
+  border-top-right-radius: 15%;
   border-bottom-right-radius: 40%;
 }
 
