@@ -38,6 +38,83 @@
   mask: url('../media/icons/chevron.svg') no-repeat center;
 }
 
+.svg-error {
+  mask: url('../media/icons/error.svg') no-repeat center;
+}
+
+.svg-info {
+  mask: url('../media/icons/info.svg') no-repeat center;
+}
+
+.svg-success {
+  mask: url('../media/icons/success.svg') no-repeat center;
+}
+
+.svg-warning {
+  mask: url('../media/icons/warning.svg') no-repeat center;
+}
+
+/*
+  Alert
+  =================
+*/
+
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 24px;
+  font-size: 1rem;
+  max-width: 32rem;
+}
+
+.alert .wrapper-svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  flex-shrink: 0;
+}
+
+.alert-info {
+  background-color: var(--color-light-blue);
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+}
+
+.alert-success {
+  background-color: var(--color-light-green);
+  color: var(--color-green);
+  border: 1px solid var(--color-green);
+}
+
+.alert-warning {
+  background-color: var(--color-light-yellow);
+  color: var(--color-yellow);
+  border: 1px solid var(--color-yellow);
+}
+
+.alert-error {
+  background-color: var(--color-light-red);
+  color: var(--color-red);
+  border: 1px solid var(--color-red);
+}
+
+.alert.alert-info .wrapper-svg {
+  background-color: var(--color-blue);
+}
+
+.alert.alert-success .wrapper-svg {
+  background-color: var(--color-green);
+}
+
+.alert.alert-warning .wrapper-svg {
+  background-color: var(--color-yellow);
+}
+
+.alert.alert-error .wrapper-svg {
+  background-color: var(--color-red);
+}
+
 /* 
   Navbar Toggle
   ================
@@ -135,6 +212,7 @@
   transition: all 0.12s;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .button .wrapper-svg {
   transition: all 0.12s;
 }
@@ -273,10 +351,10 @@
   overflow: hidden;
   position: relative;
   opacity: 0;
-  animation: fadeIn 0.3s forwards 0.3s;
+  animation: fade-in 0.3s forwards 0.3s;
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
   to {
     opacity: 1;
   }
@@ -292,7 +370,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.6),
+    rgba(255 255 255 / 60%),
     transparent
   );
   animation: shimmer 1.5s infinite;

@@ -14,6 +14,14 @@
   --color-emerald: #49d49d;
   --color-viridian: #558564;
   --color-wenge: #564946;
+  --color-blue: #0d6efd;
+  --color-light-blue: #eaf7ff;
+  --color-red: #d80117;
+  --color-light-red: #feeded;
+  --color-yellow: #ffbd07;
+  --color-light-yellow: #f9f5e5;
+  --color-green: #0e8b50;
+  --color-light-green: #dfeddf;
   --page-edge-padding: 1rem;
   --sm: 640px;
   --md: 768px;

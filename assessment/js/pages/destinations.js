@@ -1,4 +1,5 @@
 import { getDestinations } from '../fetch/destinations.js';
+import Alert from '../components/alert.js';
 
 // Query build with graphql
 // TODO: Update the query to fetch the required data
@@ -7,7 +8,7 @@ const query =
 
 document.addEventListener('DOMContentLoaded', async () => {
   const destinationsGrid = document.getElementById('destinations-grid');
-  const errorMessage = document.getElementById('destinations-error-message');
+  const alertElement = document.getElementById('destinations-error-message');
 
   // Fetch the data
   await getDestinations(query)
@@ -35,8 +36,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       // Remove skeleton loaders
       destinationsGrid.innerHTML = '';
 
-      // Display error message
-      errorMessage.hidden = false;
-      console.error('Error fetching destinations:', error);
+      console.error('Something went wrong while fetching destinations:', error);
+      Alert({
+        message:
+          'An error occurred while fetching destinations. Please try again later.',
+        type: 'error',
+        parent: alertElement,
+      });
     });
 });
