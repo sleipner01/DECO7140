@@ -14,20 +14,12 @@
 }
 
 @media only screen and (width >= 600px) {
-  .section-destinations {
-    padding: 0 4rem;
-  }
-
   .destinations-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media only screen and (width >= 768px) {
-  .section-destinations {
-    padding: 0 4rem;
-  }
-
   .destinations-grid {
     gap: 4rem;
     grid-template-columns: 1fr 1fr;

@@ -115,10 +115,6 @@
 }
 
 @media only screen and (width >= 768px) {
-  .section-cta-homepage {
-    padding: 0 4rem;
-  }
-
   .homepage-cta-grid {
     gap: 4rem;
     grid-template-columns: 1fr 1fr;
@@ -126,10 +122,6 @@
 }
 
 @media only screen and (width >= 1024px) {
-  .section-cta-homepage {
-    padding: 0 8rem;
-  }
-
   .homepage-cta-grid {
     gap: 4rem;
     grid-template-columns: 1fr 1fr;

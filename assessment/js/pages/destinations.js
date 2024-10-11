@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="card-content">
         <h3 id="destination-${place.id}-heading">${place.name}</h3>
         <p><strong>Country:</strong> ${place.country}</p>
-        <a href="./destination.html?id=${place.id}" class="button mt-auto" aria-label="Explore ${place.name} destination">Explore destination</a>
+        <a href="./destination.html?id=${place.id}" class="button mt-auto" aria-label="Explore ${place.name} destination">Explore destination<span class="wrapper-svg svg-chevron-right"></span
+                ></a>
       </div>
     `;
     destinationsGrid.appendChild(card);
