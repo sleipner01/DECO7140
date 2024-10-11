@@ -25,3 +25,10 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media only screen and (width >= 1024px) {
+  .destinations-grid {
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

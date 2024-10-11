@@ -15,6 +15,7 @@ export async function cachedFetch(
   // Check if the cache exists in localStorage
   let cacheData = handleCache(cacheKey, cacheDuration);
   if (cacheData) {
+    console.info(`Cache hit for ${cacheKey}`);
     return cacheData;
   }
 
@@ -47,6 +48,7 @@ function handleCache(cacheKey, cacheDuration) {
         return cacheEntry.data;
       } else {
         // Cache is expired, remove it
+        console.info(`Cache expired for ${cacheKey}`);
         localStorage.removeItem(cacheKey);
       }
       // eslint-disable-next-line no-unused-vars
