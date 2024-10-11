@@ -8,7 +8,6 @@
 */
 
 body {
-  max-width: var(--max-width);
   min-height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -92,18 +91,25 @@ footer a:hover {
   NOTE: Designed desktop first to simplify css logic
 */
 
-.container-navbar {
-  display: flex;
-  background-color: var(--color-white);
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem var(--page-edge-padding);
-  transition: box-shadow 0.1s ease-in-out;
-  box-shadow: none;
-  width: 100%;
+.navbar {
   position: fixed;
   z-index: 1000;
   top: 0;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  transition: box-shadow 0.1s ease-in-out;
+  box-shadow: none;
+}
+
+.container-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem var(--page-edge-padding);
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
 }
 
 .navbar-shadow {
