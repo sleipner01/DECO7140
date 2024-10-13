@@ -4,7 +4,7 @@ import Alert from '../components/alert.js';
 // Query build with graphql
 // TODO: Update the query to fetch the required data
 const query =
-  '{\n  getPlaces(categories: ["NATURE"], limit: 10) {\n    id\n    abstract\n    name\n    country\n    }\n}';
+  '{\n  getPlaces(\n    categories: ["NATURE","PEAK"]\n    limit: 10\n  ) {\n    id\n    name\n    country\n  }\n}';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const destinationsGrid = document.getElementById('destinations-grid');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <img src="./media/placeholder.svg" alt="Image of ${place.name}" loading="lazy" />
           <div class="card-content">
             <h3 id="destination-${place.id}-heading">${place.name}</h3>
-            <p><strong>Country:</strong> ${place.country}</p>
+            <p><span class="wrapper-svg svg-map-pin" aria-hidden="true" style="width:0.9rem;height:0.9rem;"></span> ${place.country}</p>
             <a href="./destination.html?id=${place.id}" class="button mt-auto" aria-label="Explore ${place.name} destination">Explore destination<span class="wrapper-svg svg-chevron-right"></span></a>
           </div>
         `;
