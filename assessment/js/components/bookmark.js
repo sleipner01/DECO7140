@@ -1,3 +1,5 @@
+import { createTooltip } from './tooltip.js';
+
 export function getBookmarks() {
   const bookmarks = localStorage.getItem('bookmarks');
   return bookmarks ? JSON.parse(bookmarks) : [];
@@ -30,6 +32,12 @@ function isBookmarked(id) {
   return bookmarks.includes(id);
 }
 
+/**
+ * Create a bookmark button.
+ * This function creates a bookmark button element.
+ * @param {string} id - The ID of the bookmark.
+ * @returns {HTMLElement} The bookmark button element.
+ */
 export default function BookmarkButton({ id }) {
   if (id === undefined || id === '') {
     throw new Error('An ID is required');
@@ -44,12 +52,19 @@ export default function BookmarkButton({ id }) {
       <span class="sr-only">${isBookmarked(id) ? 'Remove bookmark' : 'Bookmark'}</span>
       <span class="wrapper-svg svg-${isBookmarked(id) ? 'remove-bookmark' : 'bookmark'}" aria-hidden="true"></span>
     `;
+    const tooltip = createTooltip(
+      isBookmarked(id) ? 'Click to remove bookmark' : 'Click to add bookmark',
+      button
+    );
+    button.appendChild(tooltip);
   };
 
   const button = document.createElement('button');
   button.setAttribute('type', 'button');
+  button.setAttribute('aria-live', 'assertive');
   button.classList.add('button');
   button.classList.add('button-ghost');
+
   updateButton();
 
   button.addEventListener('click', () => {

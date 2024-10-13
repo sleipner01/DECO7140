@@ -419,3 +419,29 @@
 .skeleton-text:last-child {
   width: 60%;
 }
+
+/* 
+  Tooltip
+  =================
+*/
+
+.tooltip {
+  position: absolute;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 0.25rem 0.5rem;
+  border: 2px solid var(--color-viridian);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  visibility: hidden;
+  white-space: nowrap;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: visibility 0.12s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tooltip.inverse {
+  background-color: var(--color-black);
+  border-color: var(--color-emerald);
+  color: var(--color-white);
+}
