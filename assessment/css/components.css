@@ -16,6 +16,8 @@
   width: 100%;
   height: 100%;
   background-color: var(--color-black);
+  height: 1rem;
+  width: 1rem;
 }
 
 .svg-home {
@@ -52,6 +54,14 @@
 
 .svg-warning {
   mask: url('../media/icons/warning.svg') no-repeat center;
+}
+
+.svg-bookmark {
+  mask: url('../media/icons/bookmark.svg') no-repeat center;
+}
+
+.svg-remove-bookmark {
+  mask: url('../media/icons/remove_bookmark.svg') no-repeat center;
 }
 
 /*
@@ -210,6 +220,8 @@
   border-radius: 24px;
   outline-offset: 2px;
   transition: all 0.12s;
+  display: flex;
+  align-items: center;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
@@ -235,7 +247,7 @@
   outline-color: var(--color-wenge);
 }
 
-.button:hover .wrapper-svg,
+.button:hover.translate .wrapper-svg,
 .button:focus-visible .wrapper-svg {
   translate: 0.25rem;
 }
@@ -340,6 +352,15 @@
 .cta-card > img {
   aspect-ratio: 5 / 3;
   object-fit: cover;
+}
+
+.cta-card .card-content .actions {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: end;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* 

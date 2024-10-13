@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/utilities.css" />
+    <link rel="stylesheet" href="./css/pages/itineraries.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,6 +35,7 @@
 
     <!-- Scripts -->
     <script type="module" src="./js/index.js" defer></script>
+    <script type="module" src="./js/pages/itineraries.js" defer></script>
   </head>
 
   <body>
@@ -87,7 +89,86 @@
       </nav>
       <h1 class="heading-page">Saved Itineraries</h1>
     </header>
-    <main>Content coming soon...</main>
+    <main>
+      <section class="section-destinations">
+        <div class="container">
+          <h2 class="heading-section">Destinations</h2>
+          <div id="destinations-error-message" hidden></div>
+          <div class="destinations-grid" id="itineraries-destinations-grid" aria-live="polite">
+              <!-- Skeleton loaders -->
+              <div class="cta-card skeleton">
+                <div class="skeleton-img"></div>
+                <div class="card-content">
+                  <h3 class="skeleton-text"></h3>
+                  <p class="skeleton-text"></p>
+                  <p class="skeleton-text"></p>
+                </div>
+              </div>
+              <div class="cta-card skeleton">
+                <div class="skeleton-img"></div>
+                <div class="card-content">
+                  <h3 class="skeleton-text"></h3>
+                  <p class="skeleton-text"></p>
+                  <p class="skeleton-text"></p>
+                </div>
+              </div>
+              <div class="cta-card skeleton">
+                <div class="skeleton-img"></div>
+                <div class="card-content">
+                  <h3 class="skeleton-text"></h3>
+                  <p class="skeleton-text"></p>
+                  <p class="skeleton-text"></p>
+                </div>
+              </div>
+          </div>
+          <article class="no-bookmarked hidden" id="no-destinations-bookmarked" aria-hidden="true" hidden>
+          <p>
+              You have not saved any itineraries yet. Start by exploring our
+              destinations and save your favorite itineraries.
+            </p>
+            <a href="./destinations.html" class="button button-ghost">Explore</a>
+          </article>
+        </div>
+      </section>
+      <section class="section-destinations">
+        <div class="container">
+          <h2 class="heading-section">Community</h2>
+          <div id="community-error-message" hidden></div>
+          <div class="destinations-grid" id="itineraries-community-grid" aria-live="polite">
+              <!-- Skeleton loaders -->
+              <div class="cta-card skeleton">
+                <div class="skeleton-img"></div>
+                <div class="card-content">
+                  <h3 class="skeleton-text"></h3>
+                  <p class="skeleton-text"></p>
+                  <p class="skeleton-text"></p>
+                </div>
+              </div>
+              <div class="cta-card skeleton">
+                <div class="skeleton-img"></div>
+                <div class="card-content">
+                  <h3 class="skeleton-text"></h3>
+                  <p class="skeleton-text"></p>
+                  <p class="skeleton-text"></p>
+                </div>
+              </div>
+              <div class="cta-card skeleton">
+                <div class="skeleton-img"></div>
+                <div class="card-content">
+                  <h3 class="skeleton-text"></h3>
+                  <p class="skeleton-text"></p>
+                  <p class="skeleton-text"></p>
+                </div>
+              </div>
+          <article class="no-bookmarked hidden" id="no-community-bookmarked" aria-hidden="true" hidden>
+            <p>
+              Join our community to share your favorite itineraries and hidden
+              gems with other travelers.
+            </p>
+            <a href="./community.html" class="button button-ghost">Join</a>
+        </article>
+      </section>
+    </main>
     <footer role="contentinfo">
       <div class="container-footer">
         <div class="wrapper-footer-content">

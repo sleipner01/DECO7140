@@ -53,7 +53,7 @@ export const getDestinations = async () => {
     'https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/genericproduct/';
   const options = {
     method: 'GET',
-    headers: headers,
+    headers,
     redirect: 'follow',
   };
   return await cachedFetch('base-destinations', url, options)
@@ -65,7 +65,13 @@ export const getDestinations = async () => {
 };
 
 export const getDestination = async (id) => {
-  getDestinations().then((data) => {
-    return data.find((destination) => destination.id === id);
-  });
+  try {
+    const data = await getDestinations();
+    return data.find((destination_1) => destination_1.id === id);
+  } catch (error) {
+    console.error(
+      'Something went wrong while fetching the destination:',
+      error
+    );
+  }
 };

@@ -31,6 +31,16 @@
 }
 
 /*
+  Hidden
+  ===============
+  For hiding elements visually.
+*/
+
+.hidden {
+  display: none;
+}
+
+/*
   Margin
   ===============
 */
