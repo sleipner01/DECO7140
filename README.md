@@ -26,3 +26,15 @@ or
 - [Community CTA](https://www.shutterstock.com/nb/image-photo/man-waiting-his-son-rappels-down-1023960841)
 - [Recommedation CTA](https://www.shutterstock.com/nb/image-photo/traveler-woman-relaxing-on-swing-above-2130878285)
 - [Create Itineray CTA](https://www.shutterstock.com/nb/image-photo/saving-money-investment-future-senior-adult-2495629229)
+
+#### Database Schema
+
+**Destinations**
+`product_owner`: `string` - "destinations;root"
+`country` at `product_info1`: `string` - Name of Country
+`filters` at `product_info2`: `string` - "sustainable;adventure;beach;history;nature;city;family;kids"
+`sustainability_rating` at `product_info3`: `int` - Intager from 1 to 3
+
+**Community**
+`product_owner`: `string` - "community;User Name"
+`filters`: `string` - "sustainable;adventure;beach;history;nature;city;family;kids"

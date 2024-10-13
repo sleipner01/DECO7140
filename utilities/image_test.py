@@ -48,10 +48,11 @@ with open('product_data.csv', newline='', encoding='utf-8') as csvfile:
                     'product_photo': image_file
                 }
                 # Send the POST request with the image
-                response = requests.post(url, headers=headers, data=data, files=files)
+                # response = requests.post(url, headers=headers, data=data, files=files)
+            print(f"Response for product {row['product_name']}: image")
         else:
             # If no product_photo, send the request without the file
-            response = requests.post(url, headers=headers, data=data)
+            # response = requests.post(url, headers=headers, data=data)
+            print(f"Response for product {row['product_name']}: No product photo provided")
 
         # Print the response from the server
-        print(f"Response for product {row['product_name']}: {response.text}")
