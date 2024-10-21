@@ -32,3 +32,17 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+/*
+  No Bookmarked
+  ================
+*/
+
+.no-bookmarked {
+  margin-top: 1rem;
+  max-width: 32rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: start;
+}
