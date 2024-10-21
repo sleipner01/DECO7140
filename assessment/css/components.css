@@ -220,11 +220,13 @@
   transition: all 0.12s;
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
 .button .wrapper-svg {
   transition: all 0.12s;
+  background-color: var(--color-white);
 }
 
 .button.ghost {
@@ -233,9 +235,17 @@
   color: var(--color-viridian);
 }
 
+.button.ghost .wrapper-svg {
+  background-color: var(--color-viridian);
+}
+
 .button.ghost:hover {
   color: var(--color-white);
   background-color: var(--color-emerald);
+}
+
+.button.ghost:hover .wrapper-svg {
+  background-color: var(--color-white);
 }
 
 .button:hover,
@@ -336,19 +346,6 @@
 .cta-card .card-content h3 {
   font-size: 1.5rem;
   text-wrap: pretty;
-}
-
-.cta-card .card-content a {
-  display: flex;
-  text-wrap: nowrap;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-/* stylelint-disable-next-line no-descending-specificity */
-.cta-card .card-content a > .wrapper-svg {
-  background-color: white;
-  width: 1rem;
 }
 
 .cta-card > img {
