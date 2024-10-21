@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/components.css" />
-    <link rel="stylesheet" href="./css/utilities.css" />
     <link rel="stylesheet" href="./css/pages/itineraries.css" />
+    <link rel="stylesheet" href="./css/utilities.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -90,9 +90,14 @@
       <h1 class="heading-page">Saved Itineraries</h1>
     </header>
     <main>
-      <section class="section-destinations">
-        <div class="container">
-          <h2 class="heading-section">Destinations</h2>
+      <section
+        class="section-destinations"
+        aria-labelledby="#itineraries-destinations-heading"
+      >
+        <div class="container-xl mb-4">
+          <h2 class="heading-section" id="itineraries-destinations-heading">
+            Destinations
+          </h2>
           <div id="destinations-error-message" hidden></div>
           <div
             class="destinations-grid"
@@ -135,12 +140,14 @@
               You have not saved any itineraries yet. Start by exploring our
               destinations and save your favorite itineraries.
             </p>
-            <a href="./destinations.html" class="button ghost">Explore</a>
+            <a href="./destinations.html" class="button ghost translate"
+              >Explore<span class="wrapper-svg svg-chevron-right"></span
+            ></a>
           </article>
         </div>
       </section>
       <section class="section-destinations">
-        <div class="container">
+        <div class="container-xl">
           <h2 class="heading-section">Community</h2>
           <div id="community-error-message" hidden></div>
           <div
@@ -184,7 +191,9 @@
               Join our community to share your favorite itineraries and hidden
               gems with other travelers.
             </p>
-            <a href="./community.html" class="button ghost">Join</a>
+            <a href="./community.html" class="button ghost translate"
+              >Join<span class="wrapper-svg svg-chevron-right"></span
+            ></a>
           </article>
         </div>
       </section>
