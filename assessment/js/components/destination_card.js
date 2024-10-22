@@ -15,9 +15,11 @@ export default function VerticalCard(destination) {
     </div>
   `;
 
-  card
-    .querySelector('.actions')
-    .appendChild(BookmarkButton({ id: destination.id }));
+  const actions = card.querySelector('.actions');
+  actions.insertBefore(
+    BookmarkButton({ id: destination.id }),
+    actions.firstChild
+  );
 
   return card;
 }
