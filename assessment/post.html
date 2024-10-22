@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./public/favicon.png" type="image/png" />
+    <title>Destinations · Hidden Gems</title>
+    <meta name="description" content="Destinations · Hidden Gems" />
+    <meta name="author" content="Magnus Byrkjeland" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#49D49D" />
+
+    <link rel="manifest" href="./manifest.json" />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="./public/logo_icons/icon-192x192.png"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/css_reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/pages/post.css" />
+    <link rel="stylesheet" href="./css/utilities.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Scripts -->
+    <script type="module" src="./js/index.js" defer></script>
+    <script type="module" src="./js/pages/post.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar" id="navbar">
+        <div aria-label="Main navigation" class="container-navbar">
+          <a href="./index.html" class="link-logo" aria-label="Home">
+            <img
+              src="./media/logo/svg/logo.svg"
+              width="50"
+              alt="Hiddem Gems Logo"
+            />
+            <span aria-hidden="true">Hidden Gems</span>
+          </a>
+          <ul class="navbar-nav-list menu-mobile" id="navbar-menu">
+            <li>
+              <a href="./index.html" class="link-nav">
+                <span class="wrapper-svg svg-home"></span>
+                <span>Home</span></a
+              >
+            </li>
+            <li>
+              <a href="./destinations.html" class="link-nav">
+                <span class="wrapper-svg svg-map-pin"></span>
+                <span>Destinations</span>
+              </a>
+            </li>
+            <li>
+              <a href="./community.html" class="link-nav active">
+                <span class="wrapper-svg svg-message-circle-heart"></span>
+                <span>Community</span>
+              </a>
+            </li>
+            <li>
+              <a href="./bookmarks.html" class="link-nav">
+                <span class="wrapper-svg svg-book-marked"></span>
+                <span>Bookmarks</span>
+              </a>
+            </li>
+          </ul>
+          <button
+            id="nav-menu-toggle"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <span class="menu-toggle-burger"></span>
+            <span class="menu-toggle-burger"></span>
+            <span class="menu-toggle-burger"></span>
+          </button>
+        </div>
+      </nav>
+      <h1 class="heading-page">Create a Post</h1>
+    </header>
+    <main>
+      <section class="section-destinations" aria-labelledby="post-heading">
+        <div class="container-lg">
+          <h2 id="post-heading" class="mb-1 text-xl">
+            Fill out the form below to create a post
+          </h2>
+          <div id="post-error-message" hidden></div>
+          <form id="post-form" class="form" action="#">
+            <datalist id="country-list"></datalist>
+            <datalist id="filter-list"></datalist>
+            <div class="form-group">
+              <label for="owner">Your name</label>
+              <input
+                type="text"
+                id="owner"
+                name="owner"
+                required
+                aria-required="true"
+                autofocus
+              />
+            </div>
+            <div class="form-group">
+              <label for="destination-name">Destination Name</label>
+              <input
+                type="text"
+                id="destination-name"
+                name="destination-name"
+                required
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group">
+              <label for="country">Country</label>
+              <input
+                type="text"
+                id="country"
+                name="country"
+                list="country-list"
+                required
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group">
+              <!-- TODO: Add info about how to split values -->
+              <label for="tags">Filter Values/Tags</label>
+              <input
+                type="text"
+                id="tags"
+                name="tags"
+                list="filter-list"
+                placeholder="e.g., beach, nature, city, family"
+              />
+            </div>
+            <div class="form-group">
+              <label for="sustainability-rating">Sustainability Rating</label>
+              <input
+                type="number"
+                id="sustainability-rating"
+                name="sustainability-rating"
+                placeholder="1-3"
+                min="1"
+                max="3"
+              />
+            </div>
+            <div class="form-group">
+              <label for="rating">Rating</label>
+              <input
+                type="number"
+                id="rating"
+                name="rating"
+                placeholder="1-5"
+                min="1"
+                max="5"
+              />
+            </div>
+            <div class="form-group">
+              <label for="image">Upload Image</label>
+              <input type="file" id="image" name="image" accept="image/*" />
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea
+                id="description"
+                name="description"
+                rows="5"
+                required
+                aria-required="true"
+              ></textarea>
+            </div>
+            <button type="submit" class="button ghost" id="post-submit">
+              Submit
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer role="contentinfo">
+      <div class="container-footer">
+        <div class="wrapper-footer-content">
+          <div class="wrapper-image-footer">
+            <img
+              src="./media/logo/svg/logo_white.svg"
+              width="240"
+              alt="Hidden Gems Logo"
+              loading="lazy"
+            />
+          </div>
+          <nav class="wrapper-links-footer" aria-label="Footer navigation">
+            <a href="./index.html">Home</a>
+            <a href="./destinations.html">Destinations</a>
+            <a href="./community.html">Community</a>
+            <a href="./bookmarks.html">Bookmarks</a>
+          </nav>
+        </div>
+        <p>
+          &copy; 2024
+          <a href="https://byrkj.dev" target="_blank" rel="noopener noreferrer"
+            >byrkj.dev</a
+          >. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

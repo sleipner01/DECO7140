@@ -71,3 +71,31 @@ function setCache(cacheKey, data) {
   };
   localStorage.setItem(cacheKey, JSON.stringify(cacheEntry));
 }
+
+/**
+ * Post data to the server and revalidate the cache
+ * @param {string} url - The URL to post data to
+ * @param {object} headers - Headers to pass to the Fetch API
+ * @param {object} data - The data to post
+ * @param {string} cacheKey - The key to use for the cache
+ */
+
+export async function postAndRevalidate(url, headers, data, cacheKey) {
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      redirect: 'follow',
+      ...headers,
+    },
+    body: JSON.stringify(data),
+  };
+  const response = await fetch(url, options);
+  if (!response.ok) {
+    throw new Error(`Fetch error: ${response.status} ${response.statusText}`);
+  }
+  const responseData = await response.json();
+  localStorage.removeItem(cacheKey);
+  console.info(`Cache invalidated for ${cacheKey}`);
+  return responseData;
+}
