@@ -18,7 +18,7 @@ def generate_short_id():
     return str(uuid.uuid4())[:8]
 
 # Open the CSV file and read its contents
-with open('product_data.csv', newline='', encoding='utf-8') as csvfile:
+with open('insert_file_name.py', newline='', encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile)
 
     # Loop through each row in the CSV file
