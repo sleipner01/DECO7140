@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./public/favicon.png" type="image/png" />
-    <title>Itineraries · Hidden Gems</title>
+    <title>Bookmarks · Hidden Gems</title>
     <meta name="description" content="Destinations · Hidden Gems" />
     <meta name="author" content="Magnus Byrkjeland" />
     <meta name="robots" content="noindex, nofollow" />
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/components.css" />
-    <link rel="stylesheet" href="./css/pages/itineraries.css" />
+    <link rel="stylesheet" href="./css/pages/bookmarks.css" />
     <link rel="stylesheet" href="./css/utilities.css" />
 
     <!-- Fonts -->
@@ -35,7 +35,7 @@
 
     <!-- Scripts -->
     <script type="module" src="./js/index.js" defer></script>
-    <script type="module" src="./js/pages/itineraries.js" defer></script>
+    <script type="module" src="./js/pages/bookmarks.js" defer></script>
   </head>
 
   <body>
@@ -72,7 +72,7 @@
             <li>
               <a href="#" class="link-nav active">
                 <span class="wrapper-svg svg-book-marked"></span>
-                <span>Saved Itineraries</span>
+                <span>Bookmarks</span>
               </a>
             </li>
           </ul>
@@ -87,21 +87,21 @@
           </button>
         </div>
       </nav>
-      <h1 class="heading-page">Saved Itineraries</h1>
+      <h1 class="heading-page">Bookmarks</h1>
     </header>
     <main>
       <section
         class="section-destinations"
-        aria-labelledby="#itineraries-destinations-heading"
+        aria-labelledby="#bookmarks-destinations-heading"
       >
         <div class="container-xl mb-4">
-          <h2 class="heading-section" id="itineraries-destinations-heading">
+          <h2 class="heading-section" id="bookmarks-destinations-heading">
             Destinations
           </h2>
           <div id="destinations-error-message" hidden></div>
           <div
             class="destinations-grid"
-            id="itineraries-destinations-grid"
+            id="bookmarks-destinations-grid"
             aria-live="polite"
           >
             <!-- Skeleton loaders -->
@@ -137,8 +137,8 @@
             hidden
           >
             <p>
-              You have not saved any itineraries yet. Start by exploring our
-              destinations and save your favorite itineraries.
+              You have not added any bookmarks yet. Start by exploring our
+              destinations and save your favorite places.
             </p>
             <a href="./destinations.html" class="button ghost translate"
               >Explore<span class="wrapper-svg svg-chevron-right"></span
@@ -152,7 +152,7 @@
           <div id="community-error-message" hidden></div>
           <div
             class="destinations-grid"
-            id="itineraries-community-grid"
+            id="bookmarks-community-grid"
             aria-live="polite"
           >
             <!-- Skeleton loaders -->
@@ -188,7 +188,7 @@
             hidden
           >
             <p>
-              Join our community to share your favorite itineraries and hidden
+              Join our community to share your favorite bookmarks and hidden
               gems with other travelers.
             </p>
             <a href="./community.html" class="button ghost translate"
@@ -213,7 +213,7 @@
             <a href="./index.html">Home</a>
             <a href="./destinations.html">Destinations</a>
             <a href="./community.html">Community</a>
-            <a href="./itineraries.html">Saved Itineraries</a>
+            <a href="./bookmarks.html">Bookmarks</a>
           </nav>
         </div>
         <p>

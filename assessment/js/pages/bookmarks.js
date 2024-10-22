@@ -4,7 +4,7 @@ import VerticalCard from '../components/destination_card.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const destinationsGrid = document.getElementById(
-    'itineraries-destinations-grid'
+    'bookmarks-destinations-grid'
   );
   const alertElement = document.getElementById('destinations-error-message');
   const emptyMessage = document.getElementById('no-destinations-bookmarked');
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const communityGrid = document.getElementById('itineraries-community-grid');
+  const communityGrid = document.getElementById('bookmarks-community-grid');
   const alertElement = document.getElementById('community-error-message');
   const emptyMessage = document.getElementById('no-community-bookmarked');
 

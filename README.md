@@ -25,7 +25,7 @@ or
 - [Destinations CTA](https://www.shutterstock.com/nb/image-photo/person-walking-grassy-hill-mountains-under-2474842457)
 - [Community CTA](https://www.shutterstock.com/nb/image-photo/man-waiting-his-son-rappels-down-1023960841)
 - [Recommedation CTA](https://www.shutterstock.com/nb/image-photo/traveler-woman-relaxing-on-swing-above-2130878285)
-- [Create Itineray CTA](https://www.shutterstock.com/nb/image-photo/saving-money-investment-future-senior-adult-2495629229)
+- [Add Bookmark CTA](https://www.shutterstock.com/nb/image-photo/saving-money-investment-future-senior-adult-2495629229)
 
 #### Database Schema
 
