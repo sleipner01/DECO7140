@@ -360,7 +360,6 @@
 .cta-card .card-content .actions {
   width: 100%;
   display: flex;
-  flex-direction: row-reverse;
   justify-content: end;
   align-items: center;
   gap: 0.5rem;

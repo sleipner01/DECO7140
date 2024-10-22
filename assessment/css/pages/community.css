@@ -1,0 +1,34 @@
+/*
+  community
+  ================
+*/
+
+.section-community {
+  margin: 0 var(--page-edge-padding);
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media only screen and (width >= 600px) {
+  .community-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  .community-grid {
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (width >= 1024px) {
+  .community-grid {
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

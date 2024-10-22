@@ -1,4 +1,7 @@
-import { getBookmarkedDestinations } from '../fetch/bookmarks.js';
+import {
+  getBookmarkedDestinations,
+  getBookmarkedCommunityPosts,
+} from '../fetch/bookmarks.js';
 import Alert from '../components/alert.js';
 import VerticalCard from '../components/destination_card.js';
 
@@ -48,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const emptyMessage = document.getElementById('no-community-bookmarked');
 
   // Fetch the data
-  getBookmarkedDestinations()
+  getBookmarkedCommunityPosts()
     .then((data) => {
       // Remove skeleton loaders
       communityGrid.innerHTML = '';
@@ -70,10 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
       // Remove skeleton loaders
       communityGrid.innerHTML = '';
 
-      console.error('Something went wrong while fetching destinations:', error);
+      console.error(
+        'Something went wrong while fetching community posts:',
+        error
+      );
       Alert({
         message:
-          'An error occurred while fetching destinations. Please try again later.',
+          'An error occurred while fetching community posts. Please try again later.',
         type: 'error',
         parent: alertElement,
       });

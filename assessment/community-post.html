@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./public/favicon.png" type="image/png" />
-    <title>Community · Hidden Gems</title>
-    <meta name="description" content="community · Hidden Gems" />
+    <title>Community Post · Hidden Gems</title>
+    <meta name="description" content="Community Post · Hidden Gems" />
     <meta name="author" content="Magnus Byrkjeland" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#49D49D" />
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/components.css" />
-    <link rel="stylesheet" href="./css/pages/community.css" />
+    <link rel="stylesheet" href="css/pages/community-post.css" />
     <link rel="stylesheet" href="./css/utilities.css" />
 
     <!-- Fonts -->
@@ -35,7 +35,7 @@
 
     <!-- Scripts -->
     <script type="module" src="./js/index.js" defer></script>
-    <script type="module" src="./js/pages/community.js" defer></script>
+    <script type="module" src="./js/pages/community-post.js" defer></script>
   </head>
 
   <body>
@@ -64,7 +64,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="link-nav active">
+              <a href="./community.html" class="link-nav active">
                 <span class="wrapper-svg svg-message-circle-heart"></span>
                 <span>Community</span>
               </a>
@@ -87,68 +87,46 @@
           </button>
         </div>
       </nav>
-      <h1 class="heading-page">Community</h1>
     </header>
-    <main>
+    <main role="main">
+      <div class="container-max-width">
+        <img
+          id="post-image"
+          src=""
+          alt="Image of the destination"
+          loading="lazy"
+        />
+      </div>
       <section
-        class="section-community"
-        aria-labelledby="dynamic-community-heading"
+        class="section-post"
+        id="post-details"
+        aria-labelledby="post-name"
       >
-        <div class="container-xl">
-          <h2 id="dynamic-community-heading" class="mb-1 text-2xl">
-            Looking for hidden gems? See what the community has to say!
-          </h2>
-          <div id="community-error-message" hidden></div>
-          <div class="community-grid" id="community-grid" aria-live="polite">
-            <!-- Skeleton loaders -->
-            <div class="cta-card skeleton">
-              <div class="skeleton-img"></div>
-              <div class="card-content">
-                <h3 class="skeleton-text"></h3>
-                <p class="skeleton-text"></p>
-                <p class="skeleton-text"></p>
+        <div class="container-lg">
+          <h1 class="heading-page" id="post-page-heading">Destination</h1>
+          <div class="post-info">
+            <div id="post-error-message" hidden></div>
+            <div>
+              <p id="post-description"></p>
+              <div>
+                <p>
+                  <strong>By</strong> <span id="post-author"></span
+                  ><strong> · Rating:</strong> <span id="post-rating"></span>
+                </p>
               </div>
             </div>
-            <div class="cta-card skeleton">
-              <div class="skeleton-img"></div>
-              <div class="card-content">
-                <h3 class="skeleton-text"></h3>
-                <p class="skeleton-text"></p>
-                <p class="skeleton-text"></p>
+            <aside class="post-aside" id="post-aside">
+              <div id="post-filters" aria-label="Post Highlights"></div>
+              <p><strong>Country:</strong> <span id="post-country"></span></p>
+              <p class="wrapper-sustainability-rating">
+                <strong>Sustainability Rating:</strong>
+                <span id="post-sustainability-rating"></span>
+              </p>
+              <div class="wrapper-actions">
+                <p>Save to bookmarks:</p>
+                <div id="actions"></div>
               </div>
-            </div>
-            <div class="cta-card skeleton">
-              <div class="skeleton-img"></div>
-              <div class="card-content">
-                <h3 class="skeleton-text"></h3>
-                <p class="skeleton-text"></p>
-                <p class="skeleton-text"></p>
-              </div>
-            </div>
-            <div class="cta-card skeleton">
-              <div class="skeleton-img"></div>
-              <div class="card-content">
-                <h3 class="skeleton-text"></h3>
-                <p class="skeleton-text"></p>
-                <p class="skeleton-text"></p>
-              </div>
-            </div>
-            <div class="cta-card skeleton">
-              <div class="skeleton-img"></div>
-              <div class="card-content">
-                <h3 class="skeleton-text"></h3>
-                <p class="skeleton-text"></p>
-                <p class="skeleton-text"></p>
-              </div>
-            </div>
-            <div class="cta-card skeleton">
-              <div class="skeleton-img"></div>
-              <div class="card-content">
-                <h3 class="skeleton-text"></h3>
-                <p class="skeleton-text"></p>
-                <p class="skeleton-text"></p>
-              </div>
-            </div>
+            </aside>
           </div>
         </div>
       </section>
