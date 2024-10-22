@@ -62,6 +62,10 @@
   mask: url('../media/icons/remove_bookmark.svg') no-repeat center;
 }
 
+.svg-leaf {
+  mask: url('../media/icons/leaf.svg') no-repeat center;
+}
+
 /*
   Alert
   =================
@@ -433,7 +437,6 @@
   border-radius: 4px;
   font-size: 0.8rem;
   visibility: hidden;
-  white-space: nowrap;
   z-index: 1000;
   transform: translateY(-100%);
   transition: visibility 0.12s cubic-bezier(0.16, 1, 0.3, 1);
@@ -443,4 +446,21 @@
   background-color: var(--color-black);
   border-color: var(--color-emerald);
   color: var(--color-white);
+}
+
+/* 
+  Tag
+  =================
+*/
+
+.tag {
+  padding: 0.25rem 0.5rem;
+  border: 2px solid var(--color-emerald);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.tag.inverse {
+  color: var(--color-white);
+  border-color: var(--color-viridian);
 }

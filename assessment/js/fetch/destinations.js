@@ -22,7 +22,9 @@ function formatResponseData(data) {
     const filters = destination.product_info2
       ? destination.product_info2.split(';')
       : [];
-
+    const sustainabilityRating = isNaN(Number(destination.product_info3))
+      ? 0
+      : Number(destination.product_info3);
     return {
       id,
       collection,
@@ -31,7 +33,7 @@ function formatResponseData(data) {
       description: destination.product_description,
       country: destination.product_info1,
       filters,
-      sustainability_rating: destination.product_info3,
+      sustainability_rating: sustainabilityRating,
       image: destination.product_photo,
     };
   });

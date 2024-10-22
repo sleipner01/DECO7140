@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="css/pages/destination.css" />
     <link rel="stylesheet" href="./css/utilities.css" />
 
     <!-- Fonts -->
@@ -34,6 +35,7 @@
 
     <!-- Scripts -->
     <script type="module" src="./js/index.js" defer></script>
+    <script type="module" src="./js/pages/destination.js" defer></script>
   </head>
 
   <body>
@@ -85,9 +87,49 @@
           </button>
         </div>
       </nav>
-      <h1 class="heading-page">Destinations</h1>
     </header>
-    <main>Content coming soon...</main>
+    <main role="main">
+      <div class="container-max-width">
+        <img
+          id="destination-image"
+          src=""
+          alt="Image of the destination"
+          loading="lazy"
+        />
+      </div>
+      <section
+        class="section-destination"
+        id="destination-details"
+        aria-labelledby="destination-name"
+      >
+        <div class="container-xl">
+          <h1 class="heading-page" id="destination-page-heading">
+            Destination
+          </h1>
+          <div class="destination-info">
+            <div id="destination-error-message" hidden></div>
+            <p id="destination-description"></p>
+            <aside class="destination-aside" id="destination-aside">
+              <div
+                id="destination-filters"
+                aria-label="Destination Highlights"
+              ></div>
+              <p>
+                <strong>Country:</strong> <span id="destination-country"></span>
+              </p>
+              <p class="wrapper-sustainability-rating">
+                <strong>Sustainability Rating:</strong>
+                <span id="destination-sustainability-rating"></span>
+              </p>
+              <div class="wrapper-actions">
+                <p>Save to bookmarks:</p>
+                <div id="actions"></div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer role="contentinfo">
       <div class="container-footer">
         <div class="wrapper-footer-content">
