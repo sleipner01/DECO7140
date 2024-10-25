@@ -1,6 +1,6 @@
 import { getCommunityPosts } from '../fetch/community.js';
 import Alert from '../components/alert.js';
-import VerticalCard from '../components/community_post_card.js';
+import CommunityCard from '../components/community_post_card.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const communityGrid = document.getElementById('community-grid');
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Render community cards
       data.forEach((destination) => {
         // TODO: Create a card for community post
-        const card = VerticalCard(destination);
+        const card = CommunityCard(destination);
         communityGrid.appendChild(card);
       });
     })

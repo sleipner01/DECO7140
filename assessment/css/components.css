@@ -331,7 +331,7 @@
 }
 
 /* 
-  CTA Card
+  CTA Cards
   ================
 */
 
@@ -341,6 +341,10 @@
   border: 1px solid var(--color-light-gray);
   border-radius: 24px;
   overflow: hidden;
+}
+
+.cta-card.horisontal {
+  flex-direction: column;
 }
 
 .cta-card .card-content {
@@ -368,6 +372,31 @@
   justify-content: end;
   align-items: center;
   gap: 0.5rem;
+}
+
+.cta-card .card-content .short-description {
+  font-size: var(--text-sm);
+  color: var(--color-gray);
+}
+
+.cta-card .wrapper-svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+@media only screen and (width >= 1024px) {
+  .cta-card.horisontal {
+    flex-direction: row;
+  }
+
+  .cta-card.horisontal .card-content {
+    width: 100%;
+  }
+
+  .cta-card.horisontal > img {
+    aspect-ratio: 16 / 12;
+    width: 40%;
+  }
 }
 
 /* 
