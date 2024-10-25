@@ -1,6 +1,7 @@
 import { getCountries } from '../fetch/countries.js';
 import { uqcloud_zone_id } from '../config.js';
 import { postFormData } from '../fetch/postFormData.js';
+import initializeFormRequiredTags from '../components/form_required_tags.js';
 
 function generateShortId() {
   // Generate a UUID4 and take the first 8 characters for a short unique ID
@@ -57,10 +58,11 @@ async function handleFormSubmit(event, form) {
     });
 }
 
-// Set up the form submit event listener
+// Set up the form
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('post-form');
   form.addEventListener('submit', (event) => handleFormSubmit(event, form));
+  initializeFormRequiredTags();
 });
 
 // Set up input field validation

@@ -109,6 +109,7 @@
                 aria-required="true"
                 autofocus
               />
+              <small>Max 50 characters</small>
             </div>
             <div class="form-group">
               <label for="destination-name">Destination Name</label>
@@ -119,6 +120,7 @@
                 required
                 aria-required="true"
               />
+              <small>Max 50 characters</small>
             </div>
             <div class="form-group">
               <label for="country">Country</label>
@@ -141,6 +143,7 @@
                 list="filter-list"
                 placeholder="e.g., beach, nature, city, family"
               />
+              <small>Separate values with a comma</small>
             </div>
             <div class="form-group">
               <label for="sustainability-rating">Sustainability Rating</label>
@@ -152,6 +155,7 @@
                 min="1"
                 max="3"
               />
+              <small>1 = Low · 2 = Medium · 3 = High</small>
             </div>
             <div class="form-group">
               <label for="rating">Rating</label>
@@ -162,11 +166,20 @@
                 placeholder="1-5"
                 min="1"
                 max="5"
+                required
               />
+              <small>1 = Poor · 5 = Excellent</small>
             </div>
             <div class="form-group">
               <label for="image">Upload Image</label>
-              <input type="file" id="image" name="image" accept="image/*" />
+              <!-- TODO Validate max size with JS -->
+              <input
+                type="file"
+                id="image"
+                name="image"
+                accept="image/jpeg, image/jpg, image/webp"
+              />
+              <small>Max size: 10MB. Accepted formats: jpg, jpeg, webp</small>
             </div>
             <div class="form-group">
               <label for="description">Description</label>

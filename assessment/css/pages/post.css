@@ -5,37 +5,4 @@
 
 #post-form {
   margin-top: 1rem;
-  padding: 1rem;
-  border-radius: 8px;
-  border: 1px solid #e1e1e1;
-}
-
-.form-group {
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form-group label {
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-.form-group input {
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #e1e1e1;
-}
-
-.form-group textarea {
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #e1e1e1;
-}
-
-@media (width >= 768px) {
-  #post-form {
-    max-width: 40rem;
-  }
 }
