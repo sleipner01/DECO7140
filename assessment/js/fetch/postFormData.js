@@ -9,6 +9,10 @@ export async function postFormData(formData) {
     throw new Error('Zone ID is missing');
   }
 
+  if (!(formData instanceof FormData)) {
+    throw new Error('formData is not an instance of FormData');
+  }
+
   const url =
     'https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/genericproduct/';
   const headers = new Headers();

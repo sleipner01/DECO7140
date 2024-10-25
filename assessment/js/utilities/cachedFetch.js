@@ -76,19 +76,14 @@ function setCache(cacheKey, data) {
  * Post data to the server and revalidate the cache
  * @param {string} url - The URL to post data to
  * @param {object} headers - Headers to pass to the Fetch API
- * @param {object} data - The data to post
+ * @param {object} data - The data to post. Ensure this is of the correct type for the Fetch API
  * @param {string} cacheKey - The key to use for the cache
  */
-
 export async function postAndRevalidate(url, headers, data, cacheKey) {
   const options = {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      redirect: 'follow',
-      ...headers,
-    },
-    body: JSON.stringify(data),
+    headers,
+    body: data,
   };
   const response = await fetch(url, options);
   if (!response.ok) {

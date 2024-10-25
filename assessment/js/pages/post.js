@@ -13,7 +13,9 @@ function finalizeProductName(name) {
 }
 
 function formatProductOwner(owner, rating) {
-  return `community;${owner};${rating}`;
+  // TODO: remove placeholder
+  // return `community;${owner};${rating}`;
+  return 'root_test';
 }
 
 function formatFilterValues(tags) {
@@ -23,24 +25,25 @@ function formatFilterValues(tags) {
     .join(';');
 }
 
-async function handleFormSubmit(event) {
+async function handleFormSubmit(event, form) {
   event.preventDefault();
-  const formData = new FormData(event.target);
+  const formData = new FormData(form);
   // TODO: Implement form validation
-  const post = {
-    product_name: finalizeProductName(formData.get('destination-name')),
-    product_owner: formatProductOwner(
-      formData.get('owner'),
-      formData.get('rating')
-    ),
-    product_description: formData.get('description'),
-    website_code: uqcloud_zone_id,
-    product_info1: formData.get('country'),
-    product_info2: formatFilterValues(formData.get('tags')),
-    product_info3: formData.get('sustainability-rating'),
-    product_photo: formData.get('image'),
-  };
-  console.log(post);
+  const post = new FormData();
+  post.append(
+    'product_name',
+    finalizeProductName(formData.get('destination-name'))
+  );
+  post.append(
+    'product_owner',
+    formatProductOwner(formData.get('owner'), formData.get('rating'))
+  );
+  post.append('product_description', formData.get('description'));
+  post.append('website_code', uqcloud_zone_id);
+  post.append('product_info1', formData.get('country'));
+  post.append('product_info2', formatFilterValues(formData.get('tags')));
+  post.append('product_info3', formData.get('sustainability-rating'));
+  post.append('product_photo', formData.get('image'));
 
   postFormData(post)
     .then(() => {
@@ -57,7 +60,7 @@ async function handleFormSubmit(event) {
 // Set up the form submit event listener
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('post-form');
-  form.addEventListener('submit', handleFormSubmit);
+  form.addEventListener('submit', (event) => handleFormSubmit(event, form));
 });
 
 // Set up input field validation
