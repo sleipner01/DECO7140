@@ -1,9 +1,15 @@
 import BookmarkButton from './bookmark.js';
 
-export default function DestinationCard(destination) {
+/**
+ * Create a destination card
+ * @param {Object} destination - Destination object
+ * @param {boolean} isVertical - If the card should be vertical
+ * @returns {HTMLElement} - Destination card
+ */
+export default function DestinationCard(destination, isVertical = false) {
   const card = document.createElement('article');
   card.classList.add('cta-card');
-  card.classList.add('horisontal');
+  if (isVertical) card.classList.add('horisontal');
   card.setAttribute('aria-labelledby', `destination-${destination.id}-heading`);
   const charactersToShow = 100;
   const trimmedDescription =

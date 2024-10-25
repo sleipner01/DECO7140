@@ -1,5 +1,10 @@
 import BookmarkButton from './bookmark.js';
 
+/**
+ * Create a community post card
+ * @param {Object} post - Post object
+ * @returns {HTMLElement} - Post card
+ */
 export default function CommunityCard(post) {
   const card = document.createElement('article');
   card.classList.add('cta-card');
