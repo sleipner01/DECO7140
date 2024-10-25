@@ -51,7 +51,7 @@
   margin: 0.5rem 0;
 }
 
-.wrapper-sustainability-rating {
+.wrapper-ratings {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -64,10 +64,19 @@
   align-items: center;
 }
 
-#post-sustainability-rating .wrapper-svg {
+.wrapper-ratings .wrapper-svg {
   background-color: var(--color-viridian);
   width: 1.4rem;
   height: 1.4rem;
+}
+
+.wrapper-ratings .wrapper-svg.svg-star {
+  background-color: var(--color-yellow);
+}
+
+.wrapper-owner {
+  font-style: italic;
+  font-weight: 300;
 }
 
 @media only screen and (width >= 640px) {

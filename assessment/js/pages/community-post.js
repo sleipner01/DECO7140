@@ -27,15 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Create leafs for the sustainability rating
-      const leafs = Array(post.sustainability_rating)
-        .fill(null)
-        .map(() => {
-          const leaf = document.createElement('span');
-          leaf.classList.add('wrapper-svg');
-          leaf.classList.add('svg-leaf');
-          leaf.setAttribute('aria-hidden', 'true');
-          return leaf;
-        });
+      const leafs = Array.from({ length: post.sustainability_rating }, () => {
+        const leaf = document.createElement('span');
+        leaf.classList.add('wrapper-svg', 'svg-leaf');
+        leaf.setAttribute('aria-hidden', 'true');
+        return leaf;
+      });
+
+      // Create stars for the rating
+      const stars = Array.from({ length: post.rating }, () => {
+        const star = document.createElement('span');
+        star.classList.add('wrapper-svg', 'svg-star');
+        star.setAttribute('aria-hidden', 'true');
+        return star;
+      });
 
       // Create tags for the filters
       const highlights = post.filters.map((filter) => {
@@ -53,9 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
       postImage.alt = `Image of ${post.name}`;
       document.getElementById('post-description').textContent =
         post.description;
-      document.getElementById('post-author').textContent = post.owner;
-      document.getElementById('post-rating').textContent = post.rating;
+      document.getElementById('post-author').textContent = 'By: ' + post.owner;
       document.getElementById('post-country').textContent = post.country;
+      document.getElementById('post-rating').append(...stars);
       document.getElementById('post-sustainability-rating').append(...leafs);
       document.getElementById('post-filters').append(...highlights);
       document

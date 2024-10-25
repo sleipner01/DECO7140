@@ -63,7 +63,6 @@ export default function BookmarkButton({ id }) {
   button.setAttribute('type', 'button');
   button.setAttribute('aria-live', 'assertive');
   button.classList.add('button');
-  button.classList.add('ghost');
 
   updateButton();
 
