@@ -68,6 +68,10 @@
   margin-top: auto;
 }
 
+.mt-1 {
+  margin-top: 1rem;
+}
+
 .mb-1 {
   margin-bottom: 1rem;
 }
@@ -76,12 +80,12 @@
   margin-bottom: 2rem;
 }
 
-.m-4 {
-  margin: 4rem;
-}
-
 .mb-4 {
   margin-bottom: 4rem;
+}
+
+.m-4 {
+  margin: 4rem;
 }
 
 @media only screen and (width >= 768px) {

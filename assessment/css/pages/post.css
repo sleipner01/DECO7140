@@ -1,4 +1,13 @@
 /*
+  Section
+  ===============
+*/
+
+.section-post-form {
+  margin: 0 var(--page-edge-padding);
+}
+
+/*
   Form
   ===============
 */

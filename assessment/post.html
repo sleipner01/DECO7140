@@ -90,7 +90,7 @@
       <h1 class="heading-page">Create a Post</h1>
     </header>
     <main>
-      <section class="section-destinations" aria-labelledby="post-heading">
+      <section class="section-post-form" aria-labelledby="post-heading">
         <div class="container-lg">
           <h2 id="post-heading" class="mb-1 text-xl">
             Fill out the form below to create a post
@@ -108,6 +108,7 @@
                 required
                 aria-required="true"
                 autofocus
+                placeholder="Ola Nordmann"
               />
               <small>Max 50 characters</small>
             </div>
@@ -119,6 +120,7 @@
                 name="destination-name"
                 required
                 aria-required="true"
+                placeholder="Lyngør Islands"
               />
               <small>Max 50 characters</small>
             </div>
@@ -131,7 +133,9 @@
                 list="country-list"
                 required
                 aria-required="true"
+                placeholder="Norway"
               />
+              <small>It needs to be a recognized country from the list.</small>
             </div>
             <div class="form-group">
               <!-- TODO: Add info about how to split values -->
@@ -141,7 +145,7 @@
                 id="tags"
                 name="tags"
                 list="filter-list"
-                placeholder="e.g., beach, nature, city, family"
+                placeholder="nature,family"
               />
               <small>Separate values with a comma</small>
             </div>
@@ -151,11 +155,17 @@
                 type="number"
                 id="sustainability-rating"
                 name="sustainability-rating"
-                placeholder="1-3"
                 min="1"
                 max="3"
+                placeholder="1-3"
+                required
               />
               <small>1 = Low · 2 = Medium · 3 = High</small>
+              <small
+                id="sustainability-rating-error-message"
+                class="form-error-message"
+                aria-live="polite"
+              ></small>
             </div>
             <div class="form-group">
               <label for="rating">Rating</label>
@@ -163,23 +173,33 @@
                 type="number"
                 id="rating"
                 name="rating"
-                placeholder="1-5"
                 min="1"
                 max="5"
+                placeholder="1-5"
                 required
               />
               <small>1 = Poor · 5 = Excellent</small>
+              <small
+                id="rating-error-message"
+                class="form-error-message"
+                aria-live="polite"
+              ></small>
             </div>
             <div class="form-group">
               <label for="image">Upload Image</label>
-              <!-- TODO Validate max size with JS -->
               <input
                 type="file"
                 id="image"
                 name="image"
                 accept="image/jpeg, image/jpg, image/webp"
+                required
               />
               <small>Max size: 10MB. Accepted formats: jpg, jpeg, webp</small>
+              <small
+                id="image-error-message"
+                class="form-error-message"
+                aria-live="polite"
+              ></small>
             </div>
             <div class="form-group">
               <label for="description">Description</label>
@@ -189,11 +209,35 @@
                 rows="5"
                 required
                 aria-required="true"
+                aria-valuemin="100"
+                placeholder="Along the coast of Norway, you will find the Lyngør Islands. A hidden gem with a rich history and beautiful nature..."
               ></textarea>
+              <small>Min 100 characters</small>
+              <small
+                id="description-error-message"
+                class="form-error-message"
+                aria-live="polite"
+              ></small>
             </div>
-            <button type="submit" class="button ghost" id="post-submit">
-              Submit
-            </button>
+            <div class="flex-row-align-center gap-1">
+              <button
+                type="submit"
+                class="button ghost"
+                id="post-submit"
+                disabled
+              >
+                Submit
+              </button>
+              <div
+                id="form-loading-spinner"
+                class="loading-spinner hidden"
+                aria-hidden="true"
+                aria-live="assertive"
+              >
+                <span class="sr-only">Posting gem...</span>
+              </div>
+            </div>
+            <div id="alert-area" class="mt-1" hidden></div>
           </form>
         </div>
       </section>
