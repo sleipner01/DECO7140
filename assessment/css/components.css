@@ -400,6 +400,28 @@
 }
 
 /* 
+  Community Share CTA
+  ================
+*/
+
+.community-share-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  max-width: 32rem;
+  border: 2px solid var(--color-emerald);
+  border-radius: 24px;
+  padding: 1rem;
+  margin: 4rem auto 0 auto;
+}
+
+.community-share-cta p {
+  max-width: 40ch;
+}
+
+/* 
   Skeleton Loaders
   =================
 */
