@@ -66,6 +66,11 @@
   mask: url('../media/icons/leaf.svg') no-repeat center;
 }
 
+.svg-star {
+  mask: url('../media/icons/star.svg') no-repeat center;
+  background-color: var(--color-star-yellow);
+}
+
 /*
   Alert
   =================
@@ -462,4 +467,15 @@
 .tag.inverse {
   color: var(--color-white);
   border-color: var(--color-viridian);
+}
+
+/* 
+  Star rating
+  =================
+*/
+
+.wrapper-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }

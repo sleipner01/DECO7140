@@ -41,6 +41,25 @@
 }
 
 /*
+  Flex
+  ===============
+*/
+
+.flex-row-align-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-025 {
+  gap: 0.25rem;
+}
+
+/*
   Margin
   ===============
 */
