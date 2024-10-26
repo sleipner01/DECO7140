@@ -8,7 +8,7 @@ function createCommentElement(comment) {
   commentElement.classList.add('wrapper-comment');
   commentElement.setAttribute(
     'aria-labelledby',
-    `comment-author-${comment.author}`
+    `comment-author-${comment.id}`
   );
 
   commentElement.innerHTML = `
@@ -16,7 +16,9 @@ function createCommentElement(comment) {
     <div class="comment-footer">
       <img src="${comment.image}" alt="${comment.author} profile picture" class="comment-photo" />
       <div class="comment-details">
+        <span class="sr-only">Posted by</span>
         <span class="comment-author" id="comment-author-${comment.id}">${comment.author}</span>
+        <span class="sr-only">on</span>
         <span class="comment-date">${new Date(comment.date).toLocaleDateString()}</span>
       </div>
     </div>

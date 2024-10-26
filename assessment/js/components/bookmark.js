@@ -47,10 +47,9 @@ export default function BookmarkButton({ id, ghost = true }) {
   const updateButton = () => {
     button.setAttribute(
       'aria-label',
-      isBookmarked(id) ? 'Remove bookmark' : 'Bookmark'
+      isBookmarked(id) ? 'Remove bookmark' : 'Click to add bookmark'
     );
     button.innerHTML = `
-      <span class="sr-only">${isBookmarked(id) ? 'Remove bookmark' : 'Bookmark'}</span>
       <span class="wrapper-svg svg-${isBookmarked(id) ? 'remove-bookmark' : 'bookmark'}" aria-hidden="true"></span>
     `;
     const tooltip = createTooltip(

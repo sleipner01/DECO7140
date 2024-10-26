@@ -110,14 +110,17 @@
               <p id="post-description"></p>
             </div>
             <aside class="post-aside" id="post-aside">
-              <div id="post-filters" aria-label="Post Highlights"></div>
-              <p><strong>Country:</strong> <span id="post-country"></span></p>
+              <ul id="post-filters" aria-label="Post Highlights"></ul>
+              <p>
+                <strong aria-hidden="true">Country:</strong>
+                <span id="post-country"></span>
+              </p>
               <p class="wrapper-ratings">
-                <strong>Sustainability Rating:</strong>
+                <strong aria-hidden="true">Sustainability Rating:</strong>
                 <span id="post-sustainability-rating"></span>
               </p>
               <p class="wrapper-ratings">
-                <strong>Rating:</strong>
+                <strong aria-hidden="true">Rating:</strong>
                 <span id="post-rating"></span>
               </p>
               <p class="wrapper-owner">
@@ -129,7 +132,7 @@
                 <span id="post-author"></span>
               </div>
               <div class="wrapper-actions">
-                <p>Save to bookmarks:</p>
+                <p aria-hidden="true">Save to bookmarks:</p>
                 <div id="actions"></div>
               </div>
             </aside>
@@ -181,6 +184,17 @@
               </div>
             </div>
           </div>
+          <article class="community-share-cta">
+            <h3 class="text-2xl">Share your hidden gems!</h3>
+            <p>
+              Don't you think others deserve to know where you've been? We do!
+            </p>
+            <a href="./post.html" class="button translate"
+              >Share your hidden gem<span
+                class="wrapper-svg svg-chevron-right"
+              ></span
+            ></a>
+          </article>
         </div>
       </section>
     </main>

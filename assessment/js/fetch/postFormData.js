@@ -19,5 +19,5 @@ export async function postFormData(formData) {
   headers.append('student_number', student_number);
   headers.append('uqcloud_zone_id', uqcloud_zone_id);
 
-  return await postAndRevalidate(url, headers, formData, 'destinations');
+  return await postAndRevalidate(url, headers, formData, 'community_posts');
 }

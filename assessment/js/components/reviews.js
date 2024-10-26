@@ -14,13 +14,15 @@ function createReviewCommentElement(comment) {
   commentElement.innerHTML = `
     <div class="review-stars" id="review-${comment.id}-rating"></div>
     <header>
-      <h3 id="comment-${comment.id}-heading">${comment.title}</h3>
+      <h3 id="comment-${comment.id}-heading" aria-label="${comment.title}, ${comment.rating} out of 5 stars.">${comment.title}</h3>
     </header>
     <p class="comment-body">${comment.text}</p>
     <div class="comment-footer">
       <img src="${comment.image}" alt="${comment.author} profile picture" class="comment-photo" />
       <div class="comment-details">
+        <span class="sr-only">Posted by</span>
         <span class="comment-author" id="comment-author-${comment.id}">${comment.author}</span>
+        <span class="sr-only">on</span>
         <span class="comment-date">${new Date(comment.date).toLocaleDateString()}</span>
       </div>
     </div>

@@ -665,8 +665,8 @@ form .form-error-message {
 /* Wrapper */
 .wrapper-comment {
   width: 100%;
-  background-color: #f8f9fa;
   border-radius: 8px;
+  border: 2px solid #e1e1e1;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0 0 0 / 10%);
   display: flex;
@@ -711,7 +711,7 @@ form .form-error-message {
 
 .comment-date {
   font-size: var(--text-xs);
-  color: #999;
+  color: #6e6e6e;
 }
 
 /* 

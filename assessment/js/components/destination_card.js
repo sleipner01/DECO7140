@@ -20,10 +20,10 @@ export default function DestinationCard(destination, isVertical = false) {
     <img src="${destination.image}" alt="Image of ${destination.name}" loading="lazy" />
     <div class="card-content">
       <h3 id="destination-${destination.id}-heading">${destination.name}</h3>
-      <p class="flex-row-align-center gap-025"><span class="wrapper-svg svg-map-pin" aria-hidden="true"></span> ${destination.country}</p>
+      <p class="flex-row-align-center gap-025"><span class="wrapper-svg svg-map-pin" aria-hidden="true"></span><span class="sr-only">Located in </span>${destination.country}</p>
       <p class="short-description">${trimmedDescription}</p>
       <div class="actions mt-auto">
-        <a href="./destination.html?id=${destination.id}" class="button translate" aria-label="Explore ${destination.name} destination">Explore destination<span class="wrapper-svg svg-chevron-right"></span></a>
+        <a href="./destination.html?id=${destination.id}" class="button translate" aria-label="Explore ${destination.name}">Explore destination<span class="wrapper-svg svg-chevron-right"></span></a>
       </div>
     </div>
   `;

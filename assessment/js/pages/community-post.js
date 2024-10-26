@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!postId) {
     console.error('No post ID provided in the URL. Redirecting to home.');
-    window.location.href = '/';
+    window.location.href = './index.html';
     return;
   }
 
@@ -46,25 +46,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Create tags for the filters
       const highlights = post.filters.map((filter) => {
-        const tag = document.createElement('span');
+        const tag = document.createElement('li');
         tag.classList.add('tag');
         tag.textContent = filter;
-        tag.setAttribute('role', 'listitem');
         return tag;
       });
 
       // Populate the page with post data
       document.getElementById('post-page-heading').textContent = post.name;
+
       const postImage = document.getElementById('post-image');
       postImage.src = post.image;
       postImage.alt = `Image of ${post.name}`;
+
       document.getElementById('post-description').textContent =
         post.description;
+
       document.getElementById('post-author').textContent = 'By: ' + post.owner;
-      document.getElementById('post-country').textContent = post.country;
-      document.getElementById('post-rating').append(...stars);
-      document.getElementById('post-sustainability-rating').append(...leafs);
+
+      const countryElement = document.getElementById('post-country');
+      countryElement.textContent = post.country;
+      countryElement.setAttribute('aria-label', `Country: ${post.country}`);
+
+      const ratingElement = document.getElementById('post-rating');
+      const ratingLabel = document.createElement('span');
+      ratingLabel.classList.add('sr-only');
+      ratingLabel.innerText = `Rating ${post.rating} out of 5`;
+      ratingElement.appendChild(ratingLabel);
+      ratingElement.append(...stars);
+
+      const sustainabilityRatingElement = document.getElementById(
+        'post-sustainability-rating'
+      );
+      const sustainabilityRatingLabel = document.createElement('span');
+      sustainabilityRatingLabel.classList.add('sr-only');
+      sustainabilityRatingLabel.innerText = `Sustainability rating ${post.sustainability_rating} out of 3`;
+      sustainabilityRatingElement.appendChild(sustainabilityRatingLabel);
+      sustainabilityRatingElement.append(...leafs);
+
       document.getElementById('post-filters').append(...highlights);
+
       document
         .getElementById('actions')
         .appendChild(BookmarkButton({ id: post.id, ghost: false }));
