@@ -1,6 +1,8 @@
 import { getDestination } from '../fetch/destinations.js';
 import Alert from '../components/alert.js';
 import BookmarkButton from '../components/bookmark.js';
+import { renderReviewComments } from '../components/reviews.js';
+import { fetchReviewComments } from '../fetch/reviews.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
@@ -64,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('destination-filters').append(...highlights);
       document
         .getElementById('actions')
-        .appendChild(BookmarkButton({ id: destination.id }));
+        .appendChild(BookmarkButton({ id: destination.id, ghost: false }));
     })
     .catch((error) => {
       console.error('Error fetching destination data:', error);
@@ -75,4 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
         parent: alertElement,
       });
     });
+});
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const commentsContainer = document.getElementById('comments');
+  const comments = await fetchReviewComments();
+  renderReviewComments(comments, commentsContainer);
 });

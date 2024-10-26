@@ -36,9 +36,10 @@ function isBookmarked(id) {
  * Create a bookmark button.
  * This function creates a bookmark button element.
  * @param {string} id - The ID of the bookmark.
+ * @param {boolean} [ghost=true] - Whether the button should be a ghost button.
  * @returns {HTMLElement} The bookmark button element.
  */
-export default function BookmarkButton({ id }) {
+export default function BookmarkButton({ id, ghost = true }) {
   if (id === undefined || id === '') {
     throw new Error('An ID is required');
   }
@@ -63,6 +64,7 @@ export default function BookmarkButton({ id }) {
   button.setAttribute('type', 'button');
   button.setAttribute('aria-live', 'assertive');
   button.classList.add('button');
+  if (ghost) button.classList.add('ghost');
 
   updateButton();
 

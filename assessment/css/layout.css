@@ -179,3 +179,35 @@ footer a:hover {
   width: 100%;
   margin: 0 auto;
 }
+
+/* 
+  Comment Section
+  ================
+*/
+
+.section-comments {
+  margin: 4rem var(--page-edge-padding) 0;
+}
+
+.section-comments h2 {
+  font-size: var(--text-2xl);
+}
+
+.wrapper-comments {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1rem 0 0;
+}
+
+@media screen and (width >= 768px) {
+  .wrapper-comments {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .wrapper-comments {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

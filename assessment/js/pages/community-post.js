@@ -1,6 +1,8 @@
 import { getCommunityPost } from '../fetch/community.js';
 import Alert from '../components/alert.js';
 import BookmarkButton from '../components/bookmark.js';
+import { renderComments } from '../components/comments.js';
+import { fetchComments } from '../fetch/comments.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
@@ -65,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('post-filters').append(...highlights);
       document
         .getElementById('actions')
-        .appendChild(BookmarkButton({ id: post.id }));
+        .appendChild(BookmarkButton({ id: post.id, ghost: false }));
     })
     .catch((error) => {
       console.error('Error fetching post data:', error);
@@ -76,4 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
         parent: alertElement,
       });
     });
+});
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const commentsContainer = document.getElementById('comments');
+  const comments = await fetchComments();
+  renderComments(comments, commentsContainer);
 });
