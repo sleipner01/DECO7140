@@ -7,8 +7,6 @@ Repository for DECO7140 project and studio practices.
 ### Visit the website
 
 [UQCloud (Login)](https://deco7140-9476f1e5.uqcloud.net/)
-or
-[Vercel](https://deco-7140.vercel.app/)
 
 ## Setup
 
