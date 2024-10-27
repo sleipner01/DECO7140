@@ -37,6 +37,10 @@ function formatResponseData(data) {
   });
 }
 
+/**
+ * Get all posts from the community collection
+ * @returns {Promise<Array>} The posts array
+ */
 export const getCommunityPosts = async () => {
   if (student_number === '' || student_number === undefined) {
     throw new Error('Student number is missing');
@@ -46,8 +50,8 @@ export const getCommunityPosts = async () => {
   }
 
   const headers = new Headers();
-  headers.append('student_number', student_number); // Replace with actual student number
-  headers.append('uqcloud_zone_id', uqcloud_zone_id); // Replace with actual zone ID
+  headers.append('student_number', student_number);
+  headers.append('uqcloud_zone_id', uqcloud_zone_id);
 
   const url =
     'https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/genericproduct/';
@@ -64,6 +68,11 @@ export const getCommunityPosts = async () => {
     });
 };
 
+/**
+ * Get a single post from the community collection
+ * @param {string} id - The ID of the post
+ * @returns {Promise<Object>} The post object
+ */
 export const getCommunityPost = async (id) => {
   try {
     const data = await getCommunityPosts();

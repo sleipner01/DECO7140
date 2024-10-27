@@ -1,5 +1,9 @@
 import { createTooltip } from './tooltip.js';
 
+/**
+ * Get the bookmarks from local storage.
+ * @returns {Array} An array of bookmark IDs.
+ */
 export function getBookmarks() {
   const bookmarks = localStorage.getItem('bookmarks');
   return bookmarks ? JSON.parse(bookmarks) : [];

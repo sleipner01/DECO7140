@@ -2,6 +2,10 @@ import { getBookmarks } from '../components/bookmark.js';
 import { getDestination } from '../fetch/destinations.js';
 import { getCommunityPost } from '../fetch/community.js';
 
+/**
+ * Get all bookmarked destinations
+ * @returns {Promise<Array>} The bookmarked destinations
+ */
 export const getBookmarkedDestinations = async () => {
   const destinationIds = getBookmarks();
   if (destinationIds.length === 0) {
@@ -20,6 +24,10 @@ export const getBookmarkedDestinations = async () => {
   );
 };
 
+/**
+ * Get all bookmarked community posts
+ * @returns {Promise<Array>} The bookmarked community posts
+ */
 export const getBookmarkedCommunityPosts = async () => {
   const communityPosts = getBookmarks();
   if (communityPosts.length === 0) {

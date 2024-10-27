@@ -1,3 +1,6 @@
+/**
+ * Component to display an alternating name every 5 seconds on the homepage.
+ */
 export default function AlternatingName() {
   if (typeof document === 'undefined') {
     console.error('This code must be run in a browser environment.');

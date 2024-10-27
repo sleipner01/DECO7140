@@ -48,8 +48,8 @@ export const getDestinations = async () => {
   }
 
   const headers = new Headers();
-  headers.append('student_number', student_number); // Replace with actual student number
-  headers.append('uqcloud_zone_id', uqcloud_zone_id); // Replace with actual zone ID
+  headers.append('student_number', student_number);
+  headers.append('uqcloud_zone_id', uqcloud_zone_id);
 
   const url =
     'https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/genericproduct/';
