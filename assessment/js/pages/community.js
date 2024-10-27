@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Render community cards
       data.forEach((destination) => {
-        // TODO: Create a card for community post
         const card = CommunityCard(destination);
         communityGrid.appendChild(card);
       });

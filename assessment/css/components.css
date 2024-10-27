@@ -253,7 +253,8 @@
   background-color: var(--color-emerald);
 }
 
-.button.ghost:hover .wrapper-svg {
+.button.ghost:hover .wrapper-svg,
+.button.ghost:focus-visible .wrapper-svg {
   background-color: var(--color-white);
 }
 
