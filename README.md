@@ -1,6 +1,9 @@
 # DECO7140
 
-Repository for DECO7140 project and studio practices.
+Repository for DECO7140 project.
+The goal for the project was making at least 5 linked HTML pages with modularised CSS and Javascript.
+
+Some say adding cache and cache invalidation is overdoing it... apparantly I disagree...🤓
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGE2MHg2anRrdnhxMnQyaTFndnBmbnN6bGpvcXYxczh5ZTU1bnc4NSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/aNqEFrYVnsS52/200.webp)
 
